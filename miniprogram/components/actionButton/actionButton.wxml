@@ -1,0 +1,20 @@
+<!-- components/actionButton/actionButton.wxml -->
+<view class='wrapper' 
+bindtouchstart="startAnimation"
+animation="{{animationData}}">
+    <view class='imgBox'>
+       <image class='img' src='{{imgUrl}}'></image>
+    </view>
+    <view class='titleBox'>
+       <text>{{title}}</text>
+    </view>
+    <view class='numBox' wx:if='{{type=="date"}}'>
+        <text>{{num}}个</text>
+    </view>
+    <view class='numBox' wx:if='{{type=="note"}}'>
+        <text>{{num}}条</text>
+    </view>
+    <view class='numBox' wx:if='{{type=="aunt"}}'>
+        <text>{{num}}个</text>
+    </view>
+</view>

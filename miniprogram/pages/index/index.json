@@ -3,7 +3,9 @@
     "avatar":"/components/avatar/avatar",
     "how-long":"/components/howLong/howLong",
     "opacity-wrap":"/components/opacityWrap/opacityWrap",
-    "heart":"/components/heart/heart"
+    "heart":"/components/heart/heart",
+    "intimacy-num":"/components/intimacyNum/intimacyNum",
+    "action-button":"/components/actionButton/actionButton"
   },
   "navigationStyle":"custom"
 }

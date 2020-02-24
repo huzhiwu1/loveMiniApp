@@ -2,11 +2,21 @@
 page{
     width:100%;
     height:100%;
-    background-color: indianred;
+    /* background-image */
 }
 .wrapper{
+    width:100%;
+    height:100%;
+    position: relative;
     border-top:.001px solid #000;
 }
+.bg{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -999;
+}
+
 .header{
     color:#fff;
     /* width:100%; */
@@ -18,4 +28,44 @@ page{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.heart{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.ntimacyNum{
+    position: absolute;
+    right:5rpx;
+    top:65%;
+}
+.headImgWrap{
+    position: absolute;
+    top:250rpx;
+}
+.footer{
+    background-color: #fff;
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    bottom:0;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}
+.itemOne,.itemTwo,.itemThree{
+    position: absolute;
+}
+.itemOne{
+    left:20rpx;
+    top:-100rpx;
+}
+.itemTwo{
+    left:50%;
+    transform: translate(-50%,-50%);
+    top:-40rpx;
+}
+.itemThree{
+    right:20rpx;
+    top:-90rpx
 }

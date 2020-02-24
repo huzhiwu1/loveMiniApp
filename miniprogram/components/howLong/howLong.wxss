@@ -1,17 +1,18 @@
 /* components/howLong/howLong.wxss */
 .wrapper{
     text-align:center;
-    font-weight:300;
+    /* font-weight:300; */
     height:104rpx;
     flex-direction: column;
     justify-content: space-around;
-    letter-spacing: 1rpx;
+    letter-spacing: 1px;
+    color:#333;
 }
 .title{
-    font-size:15px
+    font-size:16px
 }
 .time{
-    font-size:12px;
+    font-size:13px;
 }
 .dayNum{
     margin:0 5px;

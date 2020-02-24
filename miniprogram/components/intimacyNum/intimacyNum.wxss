@@ -1,0 +1,68 @@
+/* components/intimacyNum/intimacyNum.wxss */
+.wrapper{
+    width:300rpx;
+    background:rgba(0,0,0,0.4);
+    height:100rpx;
+    display: flex;
+    justify-content: space-between;
+    border-radius:50rpx;
+    color:#fff;
+    letter-spacing: 2px;
+}
+.titleBox{
+    width:200rpx;
+    height:100rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.title{
+    font-size:15px;
+}
+.num{
+    font-size:20px;
+}
+.heartBox{
+    width:100rpx;
+    height:100rpx;
+    border-radius:50%;
+    position: relative;
+    background-color:#fff
+}
+.heart{
+    
+
+    width:100%;
+    /* background-color: green; */
+    height: 100%;
+    box-sizing: border-box;
+    /* border:1px solid #000; */
+    /* margin-left:20rpx;  */
+    opacity: .8;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center center;
+    z-index:999;
+    
+}
+.heart::before,.heart::after{
+    content: '';
+    /* position: absolute; */
+    width: 40%;
+    height: 60%;
+    background-color: #ff6b81;
+    border-radius: 50px 50px 0 0;
+}
+.heart::after{
+    /* left: -20rpx; */
+    margin-left:-12rpx;
+    transform: rotateZ(45deg);
+}
+.heart::before{
+    margin-right:-12rpx;
+    transform: rotateZ(-45deg);
+    /* box-shadow: -5px -5px 10px grey; */
+}

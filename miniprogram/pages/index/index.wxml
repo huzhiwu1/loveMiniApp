@@ -1,12 +1,19 @@
-<!--miniprogram/pages/index/index.wxml-->
+<!-- miniprogram/pages/index/index.wxml -->
+<image class='bg' src='/images/bg.jpeg'></image>
 <view class='wrapper'>
-<view class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
-    老胡和小茵子的恋爱时光
-</view>
-<opacity-wrap>
-<avatar slot='left'/>
-<how-long slot='center'/>
-<avatar slot='right'/>
-</opacity-wrap>
-<heart></heart>
+    <view class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
+        老胡和小茵子的恋爱时光
+    </view>
+    <opacity-wrap class='headImgWrap'>
+        <avatar slot='left' />
+        <how-long slot='center' />
+        <avatar slot='right' />
+    </opacity-wrap>
+    <heart class='heart'></heart>
+    <intimacy-num class='ntimacyNum'></intimacy-num>
+    <view class='footer'>
+        <action-button class='itemOne' num='{{5}}' type='{{"date"}}' title='纪念日' imgUrl='/images/date.png' />
+        <action-button class='itemTwo' num='{{5}}' type='{{"note"}}' title='小情话' imgUrl='/images/notes.png' />
+        <action-button class='itemThree' num='{{5}}' type='{{"date"}}' title='姨妈助手' imgUrl='/images/alock.png' />
+    </view>
 </view>

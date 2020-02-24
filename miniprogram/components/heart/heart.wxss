@@ -21,7 +21,7 @@ margin-left: 30px;
     font-size: 15px;
     /* line-height: 100%; */
     /* background-color: #fff; */
-    animation: tiaodong 2s linear infinite;
+    animation: tiaodong 4s cubic-bezier(.44,1.1,.75,.22) infinite;
     z-index: 9999;
 }
 .title::after{
@@ -45,7 +45,7 @@ margin-left: 30px;
     align-items: center;
     transform-origin: center center;
     z-index:999;
-    animation: tiaodong 2s linear infinite;
+    animation: tiaodong 3s cubic-bezier(.52,1.28,.75,.22) infinite;
 }
 
 .heart::before,.heart::after{
@@ -68,12 +68,15 @@ margin-left: 30px;
 }
 @keyframes tiaodong{
     0%{
+        opacity: 0.8;
         transform: scale(1.4,1.4);
     }
     50%{
-        transform: scale(1.6,1.6);
+        opacity: 0.6;
+        transform: scale(1.8,1.8);
     }
     100%{
+        opacity: 0.8;
         transform: scale(1.4,1.4);
     }
 }    
@@ -93,7 +96,7 @@ margin-left: 30px;
     justify-content: center;
     align-items: center;
     transform-origin: center center;
-    animation: tiaodong 2s linear infinite;
+    animation: tiaodong 4s cubic-bezier(.34,1.36,.37,.53) infinite;
 }
 
 .heartTwo::before,.heartTwo::after{

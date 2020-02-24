@@ -1,0 +1,11 @@
+<!--components/intimacyNum/intimacyNum.wxml-->
+
+<view class='wrapper'>
+    <view class='titleBox'>
+        <text class='title'>亲密值</text>
+        <text class='num'>{{num}}</text>
+    </view>
+    <view class='heartBox'>
+        <view class='heart'></view>
+    </view>
+</view>
