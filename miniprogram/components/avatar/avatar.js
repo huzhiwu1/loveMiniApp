@@ -6,7 +6,7 @@ Component({
   properties: {
     headImg:{
       type:String,
-      value:'',
+      value:'/images/defaultHead.jpeg',
     },
     gender:{
       type:Boolean,//true是男孩
