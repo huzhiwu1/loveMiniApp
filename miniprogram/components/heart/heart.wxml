@@ -1,0 +1,6 @@
+<!-- components/heart/heart.wxml -->
+<view class='wrapper'>
+    <view class="heart"></view>
+    <view class="heartTwo"></view>
+    <text class='title'></text>
+</view>

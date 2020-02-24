@@ -8,5 +8,5 @@
 <how-long slot='center'/>
 <avatar slot='right'/>
 </opacity-wrap>
-
+<heart></heart>
 </view>

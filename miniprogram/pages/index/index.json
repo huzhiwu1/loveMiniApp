@@ -2,7 +2,8 @@
   "usingComponents": {
     "avatar":"/components/avatar/avatar",
     "how-long":"/components/howLong/howLong",
-    "opacity-wrap":"/components/opacityWrap/opacityWrap"
+    "opacity-wrap":"/components/opacityWrap/opacityWrap",
+    "heart":"/components/heart/heart"
   },
   "navigationStyle":"custom"
 }

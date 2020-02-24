@@ -13,6 +13,8 @@ page{
     font-weight: 300;
     height:44px;
     display:flex;
+    font-size:17px;
+    letter-spacing: 1px;
     align-items: center;
     justify-content: center;
     text-align: center;
