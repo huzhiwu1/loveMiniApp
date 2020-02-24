@@ -1,0 +1,12 @@
+<!-- components/opacityWrap/opacityWrap.wxml -->
+<view class='wrapper white'>
+    <view class='left'>
+        <slot name='left'>左边</slot>
+    </view>
+    <view class='center'>
+        <slot name='center'>中间</slot>
+    </view>
+    <view class='right'>
+        <slot name='right'>右边</slot>
+    </view>
+</view>

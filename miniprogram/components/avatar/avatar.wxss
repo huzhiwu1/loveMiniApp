@@ -3,7 +3,7 @@
     width:100rpx;
     height:100rpx;
     border-radius: 50%;
-    border-width: 1rpx;
+    border-width: 2rpx;
     border-style: solid;
     background-color: #f8f8f8;
 }

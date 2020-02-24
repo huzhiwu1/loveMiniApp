@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "avatar":"/components/avatar/avatar"
-  }
+    "avatar":"/components/avatar/avatar",
+    "how-long":"/components/howLong/howLong",
+    "opacity-wrap":"/components/opacityWrap/opacityWrap"
+  },
+  "navigationStyle":"custom"
 }

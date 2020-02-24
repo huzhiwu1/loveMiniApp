@@ -1,0 +1,8 @@
+<!--components/howLong/howLong.wxml-->
+<view class='wrapper'>
+    <view class='title'>在一起已经</view>
+    <view class='time'>
+        <text class='dayNum'>{{howLong}}</text>
+        <text>天</text>
+    </view>
+</view>

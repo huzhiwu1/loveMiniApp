@@ -1,0 +1,12 @@
+/* components/opacityWrap/opacityWrap.wxss */
+.wrapper{
+    width:500rpx;
+    height:100rpx;
+    padding:30rpx;
+    border-top-right-radius: 80rpx;
+    border-bottom-right-radius: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color:rgba(255,255,255,.3)
+}

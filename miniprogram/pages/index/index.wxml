@@ -1,2 +1,12 @@
 <!--miniprogram/pages/index/index.wxml-->
-<avatar></avatar>
+<view class='wrapper'>
+<view class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
+    老胡和小茵子的恋爱时光
+</view>
+<opacity-wrap>
+<avatar slot='left'/>
+<how-long slot='center'/>
+<avatar slot='right'/>
+</opacity-wrap>
+
+</view>

@@ -16,5 +16,20 @@ App({
     }
 
     this.globalData = {}
+    this.getNaviagtionBarHeight()
+    // 获取胶囊的宽度
+    this.getMenuWidth()
+  },
+  getNaviagtionBarHeight(){
+    wx.getSystemInfo({
+     success:(res)=>{
+      this.globalData.navigationBarHeight=res.statusBarHeight
+     }
+    })
+  },
+  getMenuWidth(){
+    let obj = wx.getMenuButtonBoundingClientRect()
+    console.log(obj,"obj")
+    this.globalData.menuWidth=obj.width
   }
 })

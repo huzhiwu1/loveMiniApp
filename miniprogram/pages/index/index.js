@@ -5,14 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    navigationBarHeight:0,
+    menuWidth:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const app = getApp()
+    console.log(app)
+    this.setData({
+      navigationBarHeight:app.globalData.navigationBarHeight,
+      menuWidth:app.globalData.menuWidth
+    })
   },
 
   /**
