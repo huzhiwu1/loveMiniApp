@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
+    
+    
     "pages/time/time"
   ],
   "window": {

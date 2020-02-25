@@ -1,0 +1,54 @@
+/* components/loversHeadImg/loversHeadImg.wxss */
+.wrapper{
+    width:429rpx;
+    height:104rpx;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: auto;
+    border-radius:52rpx ;
+    background-color: rgba(255,255,255,.7);
+}
+.center{
+    position: relative;
+    width:100rpx;
+    height:100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart{
+    
+   
+    width:70%;
+    /* background-color: green; */
+    height: 70%;
+    box-sizing: border-box;
+    /* border:1px solid #000; */
+    /* margin-left:20rpx;  */
+    opacity: .8;
+    position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+    z-index:999;
+    
+}
+.heartTwo{
+    
+   
+    width:100%;
+    /* background-color: green; */
+    height: 100%;
+    box-sizing: border-box;
+    /* border:1px solid #000; */
+    /* margin-left:20rpx;  */
+    opacity: .8;
+    position: absolute;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    
+}

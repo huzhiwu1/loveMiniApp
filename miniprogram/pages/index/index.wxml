@@ -14,6 +14,6 @@
     <view class='footer'>
         <action-button class='itemOne' num='{{5}}' type='{{"date"}}' title='纪念日' imgUrl='/images/date.png' />
         <action-button class='itemTwo' num='{{5}}' type='{{"note"}}' title='小情话' imgUrl='/images/notes.png' />
-        <action-button class='itemThree' num='{{5}}' type='{{"date"}}' title='姨妈助手' imgUrl='/images/alock.png' />
+        <action-button class='itemThree' num='{{5}}' type='{{"aunt"}}' title='姨妈助手' imgUrl='/images/alock.png' />
     </view>
 </view>

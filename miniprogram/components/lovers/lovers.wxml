@@ -1,0 +1,18 @@
+<!--components/lovers/lovers.wxml-->
+<view class='wrapper'>
+    <lovers-head-img></lovers-head-img>
+    <view class='nameBox'>
+        <view class='leftName'>胡志武(小程序，pc管理后台页面)</view>
+        <view class='rightName'>若易</view>
+    </view>
+    <view class='note'>
+        <view class='loveFor'>
+            <text class='title'>相爱于</text>
+            <text class='info'>2019年10月15日</text>
+        </view>
+        <view class='time'>
+            <text class='title'>记录时刻</text>
+            <text class='info'>3个</text>
+        </view>
+    </view>
+</view>

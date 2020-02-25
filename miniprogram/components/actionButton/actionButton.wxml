@@ -15,6 +15,6 @@ animation="{{animationData}}">
         <text>{{num}}条</text>
     </view>
     <view class='numBox' wx:if='{{type=="aunt"}}'>
-        <text>{{num}}个</text>
+        <text>预估{{num}}天后</text>
     </view>
 </view>

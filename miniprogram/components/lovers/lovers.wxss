@@ -1,0 +1,49 @@
+/* components/lovers/lovers.wxss */
+.wrapper{
+    background-color: #ff6b81;
+    width:650rpx;
+    margin: auto;
+    border-radius: 20rpx;
+    color:#fff;
+    padding:40rpx 20rpx;
+    box-shadow: 0px 6px 8px 5px rgba(226, 132, 146,.6);
+}
+.nameBox{
+    width:100%;
+    margin: auto;
+    height:100rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:18px;
+}
+.leftName,.rightName{
+    width:50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align:center
+}
+.note{
+    margin-top: 20rpx;
+    width:100%;
+    height:100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loveFor,.time{
+    width:50%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 14px;
+}
+.info{
+    margin-top: 10rpx;
+    font-size: 16px;
+}

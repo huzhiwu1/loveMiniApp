@@ -1,6 +1,6 @@
 <!-- components/heart/heart.wxml -->
 <view class='wrapper'>
-    <view class="heart"></view>
-    <view class="heartTwo"></view>
+    <image  src='/images/heart.png' class='heart' />
+    <image  src='/images/whiteHeart.png'class='heartTwo'/>
     <text class='title'></text>
 </view>

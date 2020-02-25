@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "lovers-head-img":"/components/loversHeadImg/loversHeadImg"
+  }
+}

@@ -6,6 +6,6 @@
         <text class='num'>{{num}}</text>
     </view>
     <view class='heartBox'>
-        <view class='heart'></view>
+        <image class='heart' src='/images/heart.png'/>
     </view>
 </view>

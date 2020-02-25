@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "lovers":"/components/lovers/lovers"
+  },
+  "navigationStyle":"custom"
 }

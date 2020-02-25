@@ -1,2 +1,14 @@
 <!--miniprogram/pages/mine/mine.wxml-->
-<text>miniprogram/pages/mine/mine.wxml</text>
+<!-- <text>miniprogram/pages/mine/mine.wxml</text> -->
+<view class='wrapper'>
+<view  class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
+    我的
+</view>
+<view class='body'>
+    <lovers></lovers>
+</view>
+     <view class='footer'>
+        <view>山有木兮卿有意</view>
+        <view>昨夜星辰恰似你</view>
+     </view>
+</view>

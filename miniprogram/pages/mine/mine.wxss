@@ -1,1 +1,25 @@
 /* miniprogram/pages/mine/mine.wxss */
+page{
+    width:100%;
+    height:100%
+}
+.header{
+    height: 44px;
+    line-height: 44px;
+    text-align: left;
+    padding-left:30rpx;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+    background:#fff;
+    position: relative;
+}
+.footer{
+    position:absolute;
+    bottom: 30rpx;
+    left:50%;
+    color:#34b5ff;
+    letter-spacing: 2px;
+    transform: translate(-50%);
+}

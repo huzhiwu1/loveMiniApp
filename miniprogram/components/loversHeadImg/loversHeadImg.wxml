@@ -1,0 +1,10 @@
+<!--components/loversHeadImg/loversHeadImg.wxml-->
+<view class='wrapper'>
+    <avatar/>
+    <view class='center'>
+        <image src="/images/heart.png" class='heart'/>
+        <image src="/images/whiteHeart.png" class='heartTwo'/>
+    </view>
+    
+    <avatar/>
+</view>
