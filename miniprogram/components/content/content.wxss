@@ -1,0 +1,62 @@
+/* components/content/content.wxss */
+.wrapper{
+    width:100%;
+    overflow: hidden;
+    font-size:30rpx;
+}
+.write{
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;  
+    margin:10rpx 0;
+    -webkit-box-orient: vertical;
+}
+.footer{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color:#bfbfbf;
+    font-size: 24rpx;
+}
+.localBox{
+    /* width:200rpx; */
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+}
+.img{
+    width:30rpx;
+    height:30rpx;
+}
+
+.text{
+  
+    color:#bfbfbf;
+    margin:0 10rpx;
+}
+.localImg{
+    margin-right: 10rpx;
+}
+.loveImg{
+    margin-right: 5rpx;
+}
+.lastImg{
+    margin-left: 5rpx;
+}
+.loveBox{
+    /* width:80rpx; */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-right:40rpx; */
+}
+.right{
+    /* width:120rpx; */
+    /* width:80rpx; */
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "img-card":"/components/imgCard/imgCard",
+    "time-line":"/components/timeLine/timeLine",
+    "content":"/components/content/content"
+  },
+  "navigationStyle":"custom"
 }

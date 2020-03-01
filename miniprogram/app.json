@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/time/time",
     "pages/index/index",
-    "pages/mine/mine",
+    "pages/mine/mine"
     
     
-    "pages/time/time"
+   
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

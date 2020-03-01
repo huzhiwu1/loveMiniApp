@@ -1,0 +1,30 @@
+<!--components/imgContent/imgContent.wxml-->
+<view class='wrapper'>
+    <view 
+            wx:if="{{imgList.length!=1}}"
+            class='imgBox'
+            wx:for="{{imgSlice.imgs(imgList)}}" 
+            wx:key="index" 
+    >
+      
+           <image class='img'  src="{{item}}" />
+
+      
+    </view>
+    <view wx:if="{{imgList.length==1}}"
+    class='oneImgBox'
+     wx:for="{{imgSlice.imgs(imgList)}}" 
+            wx:key="index" 
+    >
+         <image class='img'  src="{{item}}" />
+    </view>
+    <view class='mark' wx:if="{{imgList.length>6}}">
+       <view class='num'>+{{imgList.length-6}}</view>
+    </view>
+</view>
+<wxs module="imgSlice">
+    function imgs(arr){
+        return arr.slice(0,6)
+    }
+    module.exports.imgs = imgs
+</wxs>

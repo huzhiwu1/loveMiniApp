@@ -1,0 +1,12 @@
+<!--components/imgCard/imgCard.wxml-->
+<view class='wrapper'>
+    <view class='loverHead'>
+         <avatar class='boy'/>
+    <avatar class='girl'/>
+    </view>
+    <image  class='bgImg'src='{{bgImg}}' />
+    <view class='infoBox'>
+        <text>共记录</text>
+        <view class='num'>{{noteNum}}<view class='normalTitle'>个时刻</view></view>
+    </view>
+</view>

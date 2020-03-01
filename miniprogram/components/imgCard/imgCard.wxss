@@ -1,0 +1,54 @@
+/* components/imgCard/imgCard.wxss */
+.wrapper{
+    width:100%;
+    height:400rpx;
+    position: relative;
+    margin-bottom: 10rpx;
+}
+.loverHead{
+    position: absolute;
+    left:30rpx;
+    bottom:30rpx;
+    height:104rpx;
+}
+.girl,.boy{
+    position: absolute;
+}
+.girl{
+    margin-left: 85rpx;
+}
+.bgImg{
+    width:100%;
+    height:100%;
+}
+.infoBox{
+    font-size: 15px;
+    border-radius: 50%;
+    /* width: 130rpx;
+    height:120rpx; */
+    padding:20rpx;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom:30rpx;
+    right:30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff
+}
+.num{
+    display: flex;
+    padding:0;
+   justify-content: center;
+    align-items: center; 
+    vertical-align: center;
+    font-size:20px;
+    line-height: 100%;
+}
+.num .normalTitle{
+   padding:0;
+   
+    margin-left: 10rpx;
+    font-size: 15px;
+}

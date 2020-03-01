@@ -1,0 +1,65 @@
+/* components/timeLine/timeLine.wxss */
+.wrapper{
+    width:100%;
+    display:flex;
+    padding: 0 25rpx;
+    justify-content: flex-start;
+    align-items:stretch;
+    box-sizing: border-box;
+}
+.dotBox{
+    width:40rpx;
+    min-width: 40rpx;
+    max-height: 40rpx;
+    min-height: 40rpx;
+    max-height: 40rpx;
+    height:40rpx;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* border-radius: 50%; */
+    /* padding:1rpx; */
+    /* border:2rpx solid #1e88e5; */
+    /* background-color: green; */
+}
+.centerBox{
+    margin-top: 18rpx;
+    width:46rpx;
+
+    /* height:100%; */
+    /* background-color: green; */
+    flex-direction: column; 
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+.monthAndDay{
+    width:80rpx;
+    /* background-color:green; */
+    text-align:center
+   
+}
+.column{
+ 
+    height:100%;
+    width:1rpx;
+    margin-top: 10rpx;
+    background-color: rgba(0,0,0,0.2);
+}
+.month{
+    font-size:15px;
+    letter-spacing: 1px;
+}
+.day{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color:rgba(0,0,0,0.5)
+}
+.content{
+    width:564rpx;
+    box-sizing: border-box;
+    padding-left:10rpx;
+}

@@ -1,0 +1,23 @@
+<!--components/content/content.wxml-->
+<view class='wrapper'>
+    <view class='write'>
+        {{content}}
+    </view>
+    <view class='picBox'>
+        <img-content/>
+    </view>
+    <view class='footer'>
+        <view class='localBox'>
+             <image class='img localImg' src='/images/local.png' />
+             <text>{{local}}</text>
+        </view>
+        <view class='right'>
+            <view class='loveBox'>
+                <image class='img loveImg' src='/images/love.png' />
+                <text class='text' wx:if='{{loveNum>0}}'>{{loveNum}}</text>
+            </view>
+            <image class='img lastImg' src='/images/comment.png' />
+        </view>
+       
+    </view>
+</view>

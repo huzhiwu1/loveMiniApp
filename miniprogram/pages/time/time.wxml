@@ -1,2 +1,11 @@
 <!--miniprogram/pages/time /time.wxml-->
-<text>miniprogram/pages/time /time.wxml</text>
+<view class='wrapper'>
+    <view  class='header' style="padding-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
+        时光机
+    </view>
+    <img-card/>
+    <time-line>
+        <view slot='dot'>😃</view>
+        <content slot='content'/>
+    </time-line>
+</view>

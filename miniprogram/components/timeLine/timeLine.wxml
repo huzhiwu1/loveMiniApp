@@ -1,0 +1,17 @@
+<!-- components/timeLine/timeLine.wxml -->
+<view class='wrapper'>
+    <view class='monthAndDay'>
+        <view class='month'>{{month}}</view>
+        <view class='day'>{{day}}</view>
+    </view>
+    <view class='centerBox'>
+        <view class='dotBox'>
+          <slot name='dot'></slot>
+        </view>
+      
+        <view class='column'></view>
+    </view>
+    <view class='content'>
+        <slot name='content'></slot>
+    </view>
+</view>

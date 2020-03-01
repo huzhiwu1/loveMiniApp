@@ -1,1 +1,13 @@
 /* miniprogram/pages/time /time.wxss */
+page{
+    background-color: '#f8f8f8';
+}
+.header{
+    width:100%;
+    height:44px;
+    line-height: 44px;
+    padding-left:30rpx;
+    letter-spacing: 1px;
+    font-size: 15px;
+    background-color: #fff;
+}
