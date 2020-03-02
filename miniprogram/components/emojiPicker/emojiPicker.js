@@ -13,6 +13,7 @@ Component({
   data: {
     animationData:{},
     isShow:true,
+    selectedEmoji:''
   },
   lifetimes:{
     attached(){
@@ -37,12 +38,15 @@ Component({
       }
       
     },
-    selectEmoji(){
+    selectEmoji(e){
+      console.log(e)
+      let url = e.currentTarget.dataset.url
       console.log(this.data.isShow)
       if(this.data.isShow){
         this.animation.translateX(-100).opacity(0).step()
         this.setData({
           isShow:false,
+          selectedEmoji:url,
           animationData:this.animation.export()
         })
       }

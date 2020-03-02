@@ -5,6 +5,11 @@
     "pages/mine/mine",
     "pages/addNote/addNote"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "亲，需要你提供定位授权哦" 
+    }
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",

@@ -1,7 +1,7 @@
 <view class='wrapper'>
-    <view class='selectedEmoji'>
+    <view class='selectedEmoji'  style='{{!selectedEmoji&&"padding-right: 40rpx;"}}'>
         <text class='title'>此刻心情</text>
-         <image class='img'bindtap='showEmoji' src='/images/smile.png' />
+         <image wx:if="{{selectedEmoji}}" class='img'bindtap='showEmoji'  src='{{selectedEmoji}}' />
     </view>
     <view animation='{{animationData}}' class='emojiBox'>
         <image class='img' bindtap='selectEmoji' data-url='/images/smile.png' src='/images/smile.png' />

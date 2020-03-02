@@ -6,7 +6,35 @@
         maxlength="-1"
         auto-focus="{{true}}"
         cursor-spacing="10"
-        class='editor' placeholder-class='placeholder'bindinput='changeInput' placeholder='记录下老胡和小茵子的甜蜜时刻！'/>
-        <emoji-picker/>
+        bindinput='textInput'
+        class='editor'
+        placeholder-class='placeholder'
+        placeholder='记录下老胡和小茵子的甜蜜时刻！'/>
+       
+        <view class='emojiBox'>
+             <emoji-picker/>
+             <view class='wordNum'>{{wordNum}}</view>
+        </view>
+        
+    </view>
+    <view class='imgAndLocal'>
+        <view class='imgBox'>
+            <view class='oneImgBox'
+                wx:for='{{selectImgList}}'
+            >
+                <image class='img' src='{{item}}' />
+                <image src='/images/close.png' class='closeImg' />
+            </view>
+            <view class='add' bindtap='selectUserPic'>
+                <image class='img' src='/images/addImg.png' />
+            </view>
+        </view>
+        <view class='localBox'>
+            <view class='localAndTitle'>
+                <image class='localImg' src='/images/local.png'/>
+                <text>{{local}}</text>
+            </view>
+            <image src='/images/close.png' class='localClosePng' />
+        </view>
     </view>
 </view>
