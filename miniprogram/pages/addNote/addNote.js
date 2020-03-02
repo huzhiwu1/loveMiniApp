@@ -1,30 +1,22 @@
-// miniprogram/pages/time /time.js
+// miniprogram/pages/addNote/addNote.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    navigationBarHeight:0,
-    menuWidth:0
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const app = getApp()
-    this.setData({
-      navigationBarHeight:app.globalData.navigationBarHeight,
-      menuWidth:app.globalData.menuWidth
-    })
-  },
 
-  addNote(){
-    console.log('增加文章')
-    wx.navigateTo({
-      url:'/pages/addNote/addNote'
-    })
+  },
+  changeInput(event){
+    console.log(event)
+    let value = event.detail.value
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

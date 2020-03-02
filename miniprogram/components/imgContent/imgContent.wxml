@@ -7,7 +7,7 @@
             wx:key="index" 
     >
       
-           <image class='img'  src="{{item}}" />
+           <image class='img' bindtap='previewImg' data-url='{{item}}' src="{{item}}" />
 
       
     </view>

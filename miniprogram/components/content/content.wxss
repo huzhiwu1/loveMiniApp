@@ -10,7 +10,10 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;  
-    margin:10rpx 0;
+    letter-spacing: 1rpx;
+    font-size:32rpx;
+    font-weight: 300;
+    /* margin:10rpx 0; */
     -webkit-box-orient: vertical;
 }
 .footer{

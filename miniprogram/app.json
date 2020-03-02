@@ -2,10 +2,8 @@
   "pages": [
     "pages/time/time",
     "pages/index/index",
-    "pages/mine/mine"
-    
-    
-   
+    "pages/mine/mine",
+    "pages/addNote/addNote"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -14,26 +12,30 @@
     "navigationBarTitleText": "老胡和小茵子",
     "navigationBarTextStyle": "white"
   },
-  "tabBar":{
-    "color":"#999",
-    "selectedColor":"#ff6b81",
-    "borderStyle":"white",
-    "list":[{
-      "pagePath":"pages/index/index",
-      "text":"首页",
-      "iconPath":"/images/home.png",
-      "selectedIconPath":"/images/selectedHome.png"
-    },{
-      "pagePath":"pages/time/time",
-      "text":"时光机",
-      "iconPath":"/images/clock.png",
-      "selectedIconPath":"/images/selectedClock.png"
-    },{
-      "pagePath":"pages/mine/mine",
-      "text":"我的",
-      "iconPath":"/images/user.png",
-      "selectedIconPath":"/images/selectedUser.png"
-    }]
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff6b81",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/selectedHome.png"
+      },
+      {
+        "pagePath": "pages/time/time",
+        "text": "时光机",
+        "iconPath": "/images/clock.png",
+        "selectedIconPath": "/images/selectedClock.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/user.png",
+        "selectedIconPath": "/images/selectedUser.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

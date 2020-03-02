@@ -31,6 +31,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    previewImg(event){
+      let url = event.currentTarget.dataset.url
+      // console.log(event)
+      wx.previewImage({
+        current:url,
+        urls:this.properties.imgList
+      })
+    }
   }
 })

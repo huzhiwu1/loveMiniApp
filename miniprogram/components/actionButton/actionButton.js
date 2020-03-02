@@ -36,7 +36,7 @@ Component({
     startAnimation(){
       console.log("dong")
       let animation = wx.createAnimation({
-        duration:1000,
+        duration:200,
         timingFunction:'ease-in-out'
       })
       animation.scale(1.2,1.2).step().scale(1,1).step()

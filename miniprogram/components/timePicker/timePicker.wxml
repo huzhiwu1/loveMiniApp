@@ -1,0 +1,22 @@
+<picker mode="date" value="{{date}}"  end="endTime" bindchange="bindDateChange">
+   <view class='selectedDay'>
+   <view>  {{year}}年{{month}}月{{day}}号<text class='week'>{{selectWeek.week(weekDay)}}</text></view>
+  
+    <image class='rightRow' src="/images/right.png" />
+   </view>
+</picker>
+<wxs module="selectWeek">
+    var obj = {
+        '1':"周一",
+        "2":"周二",
+        "3":"周三",
+        "4":"周四",
+        "5":"周五",
+        "6":"周六",
+        "0":"周日"    
+        }
+    function selectWeek(val){
+        return obj[val]
+    }
+    module.exports.week=selectWeek
+</wxs>

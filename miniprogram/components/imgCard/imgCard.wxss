@@ -1,7 +1,7 @@
 /* components/imgCard/imgCard.wxss */
 .wrapper{
     width:100%;
-    height:400rpx;
+    height:450rpx;
     position: relative;
     margin-bottom: 10rpx;
 }

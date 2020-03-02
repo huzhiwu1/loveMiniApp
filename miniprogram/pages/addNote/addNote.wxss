@@ -1,0 +1,13 @@
+/* miniprogram/pages/addNote/addNote.wxss */
+.editor{
+    font-size:30rpx;
+    line-height: 40rpx;
+    font-weight: 300;
+    letter-spacing: 1rpx;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.placeholder{
+    font-size:30rpx;
+    font-weight: 300;
+    letter-spacing: 1rpx;
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "time-picker":"/components/timePicker/timePicker",
+    "emoji-picker":"/components/emojiPicker/emojiPicker"
+  },
+  "navigationBarBackgroundColor":"#fff",
+  "navigationBarTitleText":"新增时刻",
+  "navigationBarTextStyle":"black"
+}

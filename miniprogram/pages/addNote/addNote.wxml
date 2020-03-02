@@ -1,0 +1,12 @@
+<!--miniprogram/pages/addNote/addNote.wxml-->
+<view class='wrapper'>
+    <time-picker></time-picker>
+    <view class='textBox'>
+        <textarea 
+        maxlength="-1"
+        auto-focus="{{true}}"
+        cursor-spacing="10"
+        class='editor' placeholder-class='placeholder'bindinput='changeInput' placeholder='记录下老胡和小茵子的甜蜜时刻！'/>
+        <emoji-picker/>
+    </view>
+</view>

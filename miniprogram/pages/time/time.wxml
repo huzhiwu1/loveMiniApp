@@ -1,11 +1,9 @@
 <!--miniprogram/pages/time /time.wxml-->
 <view class='wrapper'>
-    <view  class='header' style="padding-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
-        时光机
-    </view>
     <img-card/>
     <time-line>
         <view slot='dot'>😃</view>
         <content slot='content'/>
     </time-line>
+    <image src='/images/add.png'class='addImg' bindtap='addNote' />
 </view>
