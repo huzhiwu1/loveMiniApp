@@ -31,10 +31,10 @@
         </view>
         <view class='localBox'>
             <view class='localAndTitle'>
-                <image class='localImg' src='/images/local.png'/>
-                <text>{{local}}</text>
+                <image class='localImg'bindtap='openMap' src='/images/local.png'/>
+                <text>{{isShowLocal?street_number:"不显示"}}</text>
             </view>
-            <image src='/images/close.png' class='localClosePng' />
+            <image bindtap='closeLocal' src='/images/close.png' class='localClosePng' />
         </view>
     </view>
 </view>
