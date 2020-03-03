@@ -5,5 +5,5 @@
         <view slot='dot'>😃</view>
         <content slot='content'/>
     </time-line>
-    <image src='/images/add.png'class='addImg' bindtap='addNote' />
+    <image animation='{{animationData}}' src='/images/add.png'class='addImg' bindtap='addNote' />
 </view>

@@ -37,4 +37,5 @@
             <image bindtap='closeLocal' src='/images/close.png' class='localClosePng' />
         </view>
     </view>
+    <view class='btn' bindtap='handleSubmit'>发布</view>
 </view>

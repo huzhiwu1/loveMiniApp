@@ -6,7 +6,8 @@ Page({
    */
   data: {
     navigationBarHeight:0,
-    menuWidth:0
+    menuWidth:0,
+    animationData:{},
   },
 
   /**
@@ -14,7 +15,13 @@ Page({
    */
   onLoad: function (options) {
     const app = getApp()
+    let animation= wx.createAnimation({
+      duration:500,
+      timingFunction:'ease-in-out'
+    })
+    this.animation=animation
     this.setData({
+      
       navigationBarHeight:app.globalData.navigationBarHeight,
       menuWidth:app.globalData.menuWidth
     })
@@ -22,9 +29,16 @@ Page({
 
   addNote(){
     console.log('增加文章')
-    wx.navigateTo({
-      url:'/pages/addNote/addNote'
+   
+    this.animation.rotateZ(90).step().rotateZ(-90).step()
+    this.setData({
+      animationData:this.animation.export()
+    },()=>{
+      wx.navigateTo({
+        url:'/pages/addNote/addNote'
+      })
     })
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -44,7 +58,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+   
   },
 
   /**

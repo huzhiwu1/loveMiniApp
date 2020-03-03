@@ -19,7 +19,8 @@ Page({
     province: "广东省",
     street: "跃进路",
     street_number: "跃进路28号",
-    isShowLocal:true
+    isShowLocal:true,
+    address:""
   },
 
   /**
@@ -31,11 +32,82 @@ Page({
       key: 'SLMBZ-MJ26X-U674X-7SZRD-5I7X2-IQFD6'
     });
 
-
+    this.getArea()
   },
-  // 打开地址
+  // 地址
   openMap(){
-
+    console.log("xuanzedizhi")
+    //   // 查看是否获取用户授权
+    let that = this;
+    wx.getSetting({
+      success(res){
+        if(!res.authSetting['scope.userLocation']){
+          console.log('授权')
+          wx.authorize({
+            scope:'scope.userLocation',
+            success(res){
+              wx.chooseLocation({
+                // type:'gcj02',
+                // isHighAccuracy:true,
+                // longitude:that.data.lng||'',
+                // latitude:that.data.lat||"",
+                success(res){
+                  
+                 console.log(res,"res")
+                  that.setData({
+                    street_number:res.name,
+                    lat:res.latitude,
+                    lng:res.longitude,
+                    city:"",
+                    district: "",
+                    nation: "",
+                    province: "",
+                    street: "",
+                    address:res.address,
+                    isShowLocal:true,
+                    // latitude,longitude
+                  })
+                },
+                fail(err){
+                  console.log(er,"err")
+                }
+              })
+            },
+            fail(err){
+              // console.log(err,"err")
+              // that.openMap()
+              that.openConfirm()
+            }
+          })
+        }else{
+          wx.chooseLocation({
+            // type:'gcj02',
+            // isHighAccuracy:true,
+            // longitude:that.data.lng||'',
+            // latitude:that.data.lat||"",
+            success(res){
+              console.log(res,"")
+              that.setData({
+                street_number:res.name,
+                lat:res.latitude,
+                lng:res.longitude,
+                city:"",
+                    district: "",
+                    nation: "",
+                    province: "",
+                    street: "",
+                    address:res.address,
+                    isShowLocal:true,
+                // latitude,longitude
+              })
+            },
+            fail(err){
+              console.log(er,"err")
+            }
+          })
+        }
+      }
+    })
   },
   // 不显示地址
   closeLocal(){
@@ -72,6 +144,27 @@ Page({
   //     }
   //   })
   // },
+  // 再次获取授权
+  openConfirm(){
+    let that = this;
+    wx.showModal({
+      content:'亲，没有你的授权，无法使用定位功能哦',
+      confirmText:"确认",
+      cancelText:"取消",
+      success(res){
+        if(res.confirm){
+          wx.openSetting({
+            success(res){
+              that.openMap()
+            }
+          })
+        }else{
+
+        }
+      }
+    })
+  },
+
   getArea() {
     // console.log("getE",qqmapsdk)
     let that = this
@@ -82,6 +175,7 @@ Page({
       //   longitude:this.data.longitude
       // },
       success: function (res) {
+        // console.log('local',res)
         const { city,
           district,
           nation,
@@ -96,7 +190,8 @@ Page({
           province,
           street,
           street_number,
-          lng,lat
+          lng,lat,
+          address:res.result.address
         })
         // console.log(res,"res")
         // wx.showToast({
@@ -106,7 +201,10 @@ Page({
         // })
       },
       fail: function (err) {
-        console.log(err, "err")
+        // console.log(err, "err")
+        that.setData({
+          isShowLocal:false
+        })
       }
     })
 
@@ -145,7 +243,7 @@ Page({
    */
   onShow: function () {
     // this.getLocal()
-    this.getArea()
+    
   },
 
   /**
