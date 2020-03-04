@@ -22,8 +22,8 @@
             <view class='oneImgBox'
                 wx:for='{{selectImgList}}'
             >
-                <image class='img' src='{{item}}' />
-                <image src='/images/close.png' class='closeImg' />
+                <image bindtap='previewImg' data-url='{{item}}'  class='img' src='{{item}}' />
+                <image src='/images/close.png' class='closeImg' bindtap='discard' data-index='{{index}}' />
             </view>
             <view class='add' bindtap='selectUserPic'>
                 <image class='img' src='/images/addImg.png' />

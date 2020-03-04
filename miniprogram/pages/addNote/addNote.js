@@ -217,16 +217,34 @@ Page({
       wordNum: value.length
     })
   },
+  //删除图片
+  discard(e){
+    let index = e.currentTarget.dataset.index
+    this.data.selectImgList.splice(index,1)
+    this.setData({
+      selectImgList:this.data.selectImgList
+    })
+  },
+  // 预览图片
+  previewImg(e){
+    console.log(e)
+    let url = e.currentTarget.dataset.url;
+    let that = this
+    wx.previewImage({
+      current:url,
+      urls:that.data.selectImgList
+    })
+  },
   //选择用户
   selectUserPic() {
     wx.chooseImage({
-      count: 9,
+      count: 9-this.data.selectImgList.length,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: (res) => {
         // console.log(res,"res")
         this.setData({
-          selectImgList: res.tempFilePaths
+          selectImgList:this.data.selectImgList.concat(res.tempFilePaths)
         })
       }
     })
