@@ -1,0 +1,4 @@
+/* miniprogram/pages/markDay/markDay.wxss */
+page{
+    background-color: #ff6b81;
+}

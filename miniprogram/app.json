@@ -3,11 +3,14 @@
     "pages/time/time",
     "pages/index/index",
     "pages/mine/mine",
-    "pages/addNote/addNote"
+    "pages/addNote/addNote",
+    "pages/markDay/markDay",
+    "pages/editMarkDay/editMarkDay",
+    "pages/editDay/editDay"
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "亲，需要你提供定位授权哦" 
+      "desc": "亲，需要你提供定位授权哦"
     }
   },
   "window": {
@@ -43,5 +46,6 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "debug": true
 }

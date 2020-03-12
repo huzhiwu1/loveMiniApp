@@ -47,6 +47,21 @@
 					"id": -1,
 					"name": "pages/addNote/addNote",
 					"pathName": "pages/addNote/addNote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/markDay/markDay",
+					"pathName": "pages/markDay/markDay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/editDay",
+					"pathName": "pages/editDay/editDay",
+					"query": "",
 					"scene": null
 				}
 			]

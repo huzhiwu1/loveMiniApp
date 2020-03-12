@@ -1,0 +1,6 @@
+<!--miniprogram/pages/markDay/markDay.wxml-->
+<!-- <text>miniprogram/pages/markDay/markDay.wxml</text> -->
+<view class='wrapper'>
+    <recently-mark-pannel/>
+    <mark-day-pannel></mark-day-pannel>
+</view>

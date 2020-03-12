@@ -1,0 +1,41 @@
+<!-- miniprogram/pages/editMarkDay/editMarkDay.wxml -->
+<!-- <text>miniprogram/pages/editMarkDay/editMarkDay.wxml</text> -->
+<view class='wrapper'>
+    <image src='/images/editMarkDayBg.jpeg' class='bg' />
+    <view class='infoBox'>
+        <view class='dayName'>{{dayName}}{{isDownTime?'还有':"已有"}}</view>
+        <view class='dayNumBox'>
+            <text class='dayNum'>{{dayNum}}
+            </text>
+            <text class='title'>Days</text>
+        </view>
+        <view class='target'>目标日：{{targetDay}}</view>
+    </view>
+    <view class='btnGroupBox'>
+        <animation-box>
+            <view class='btnBox'>
+                <view class='imgBox'>
+                    <image class='img' src='/images/edit.png' />
+                </view>
+                <view class='btnTitle'>编辑</view>
+            </view>
+        </animation-box>
+        <animation-box>
+                        <view class='btnBox'>
+                <view class='imgBox'>
+                    <image class='img' src='/images/save.png' />
+                </view>
+                <view class='btnTitle'>保存</view>
+            </view>
+        </animation-box>
+        <animation-box>
+            <view class='btnBox'>
+                <view class='imgBox'>
+                    <image class='img' src='/images/share.png' />
+                </view>
+                <view class='btnTitle'>分享</view>
+            </view>
+        </animation-box>
+                    
+    </view>
+</view>

@@ -1,0 +1,68 @@
+<!--miniprogram/pages/editDay/editDay.wxml-->
+<view class='wrapper'>
+    <textarea auto-focus="{{true}}"
+    bindinput="changeDayName"
+    cursor-spacing="10"
+    value="{{dayName}}"
+    class='textArea'
+    placeholder="填写纪念日的名字"></textarea>
+    <view class='box'>
+        <view class='dateType' bindtap='triggerDateType'>
+            <view class="item {{isMoonDate?'':'active'}}">公历</view>
+            <view class="item {{isMoonDate?'active':''}}">农历</view>
+        </view>
+        <picker mode="date" 
+        value="{{date}}"  
+        end="endTime" 
+        bindchange="bindDateChange">
+            <view class='rightBox'>
+                <text class='rightTitle'>{{date}}</text>
+                <image  class='img' src='/images/right.png'/>
+            </view>
+        </picker>
+    </view>
+    <picker mode="selector"
+        range="{{array}}"
+       range-key="name"
+       bindchange='selectDownTime'
+    >
+        <view  class='box' >
+            <text >显示方式</text>
+            <view class='rightBox'>
+                <text class='rightTitle'>{{isDownTime?"倒数日":"累计日"}}</text>
+                <image class='img' src='/images/right.png' />
+            </view>
+        </view>
+    </picker>
+    <picker mode="selector"
+    range="{{remindArr}}"
+    bindchange="selectRemindDay"
+    range-key="name">
+    <view  class='box'>
+            <text >提醒时间</text>
+            <view class='rightBox'>
+                <text class='rightTitle'>{{reminDay.select(remindValue,remindArr)}}</text>
+                <image  class='img'src='/images/right.png' />
+            </view>
+        </view>
+    </picker>
+    <view class='btn'
+    bindtap='handleOk'
+    >确认修改</view>
+    
+</view>
+<wxs module="reminDay">
+    function select(value,list){
+        var name = ""
+        
+
+        list.forEach(function(item){
+          
+            if(item.value==value){
+                name = item.name
+            }
+        })
+        return name;
+    }
+    module.exports.select=select
+</wxs>

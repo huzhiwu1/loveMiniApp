@@ -1,0 +1,3 @@
+<view class='wrapper' bindtap='handleTap' animation='{{animationData}}'>
+    <slot/>
+</view>

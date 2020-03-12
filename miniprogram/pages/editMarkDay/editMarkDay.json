@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "animation-box":"/components/animationBox/animationBox"
+  },
+  "navigationBarTitleText":"纪念日"
+}

@@ -1,0 +1,19 @@
+<!-- <text>假比上班更</text> -->
+<view class='wrapper'>
+    <view class='left'>
+        <text class='name'>{{dayName}}还有</text>
+        <view class='dayBox'>
+            <text class='num'>{{dayNum}}</text>
+            <text class='day'>天</text>
+        </view>
+        <view class='target'>
+            目标日：{{targetDay}}
+        </view>
+    </view>
+    <view class='right'>
+        <text class='title'>最近的纪念日</text>
+        <view class='imgBox'>
+            <image class='img' src='/images/recentlyMarkDay.png' />
+        </view>
+    </view>
+</view>

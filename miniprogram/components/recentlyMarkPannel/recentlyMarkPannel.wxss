@@ -1,0 +1,77 @@
+/* components/recentlyMarkPannel/recentlyMarkPannel.wxss */
+.wrapper{
+    /* width:100%; */
+    margin: 30rpx;
+    padding:30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20rpx;
+    background-color: #fff;
+    overflow: hidden;
+}
+.left{
+    /* height:100%; */
+    height:222rpx;
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.right{
+    /* margin: -30rpx 0;
+    margin */
+    margin-right: -30rpx;
+    margin-bottom: -30rpx;
+    width:40%;
+    padding-top: 40%;
+    position: relative;
+}
+.imgBox{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.title{
+    margin-top: -30rpx;
+    width:100%;
+    border-bottom-left-radius: 20rpx;
+    height:2em;
+    line-height: 2em;
+    text-align: center;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index:999;
+    display: inline-block;
+    background-color: rgb(255,234,0);
+}
+.img{
+    width:100%;
+    height:100%;
+}
+.name{
+    /* margin-bottom:10rpx; */
+}
+.dayBox{
+    display: flex;
+    justify-self: flex-start;
+    align-items: baseline;
+}
+.num{
+    font-size: 60rpx;
+    color:#f00;
+}
+.day{
+    margin-left:10rpx;
+    font-size: 25rpx;
+    /* margin-bottom: 10rpx; */
+}
+.target{
+    color:#bfbfbf;
+    font-size: 25rpx;
+}

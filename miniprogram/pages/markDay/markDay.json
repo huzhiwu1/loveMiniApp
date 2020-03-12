@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "recently-mark-pannel":"/components/recentlyMarkPannel/recentlyMarkPannel",
+    "mark-day-pannel":"/components/markDayPannel/markDayPannel"
+  },
+  "navigationBarTitleText":"纪念日"
+}
