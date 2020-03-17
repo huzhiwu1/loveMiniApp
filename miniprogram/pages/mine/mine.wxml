@@ -5,7 +5,8 @@
     我的
 </view>
 <view class='body'>
-    <lovers></lovers>
+    <lovers wx:if="{{userInfo}}"></lovers>
+    <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
 </view>
      <view class='footer'>
         <view>山有木兮卿有意</view>

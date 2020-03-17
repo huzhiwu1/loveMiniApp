@@ -24,3 +24,18 @@ page{
     letter-spacing: 2px;
     transform: translate(-50%);
 }
+.btn{
+    margin-top: 100rpx;
+    color:#fff;
+    font-size:60rpx;
+    width:80%;
+    background-color: #ff6b81;
+    height:120rpx;
+    line-height: 120rpx;
+    padding:0;
+    border-radius: 60rpx;
+
+}
+.btn::after{
+    display: none;
+}

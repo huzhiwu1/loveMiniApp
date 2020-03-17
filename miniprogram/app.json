@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/mine/mine",
     "pages/time/time",
     "pages/index/index",
-    "pages/mine/mine",
+   
     "pages/addNote/addNote",
     "pages/markDay/markDay",
     "pages/editMarkDay/editMarkDay",
