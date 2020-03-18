@@ -1,0 +1,128 @@
+/* miniprogram/pages/share/friend/friend.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+.headerBox{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width:300rpx;
+    height:300rpx;
+    border-radius: 50%;
+}
+.text{
+    margin-top: 20rpx;
+    width: 80%;
+    overflow-wrap: break-word;
+    text-align: center;
+    color:#fff;
+    font-size: 40rpx;
+    letter-spacing: 1px;
+}
+.wrapper{
+    width:100%;
+    height: 100%;
+    background-color: #ff6b81;
+    position: relative;
+}
+.heartWrapper{
+    /* margin-top: 300rpx; */
+    margin-top: 100rpx;
+    overflow:initial;
+    padding:0;
+    text-align: initial;
+    position: absolute;
+    /* background-color: green; */
+    width: 200rpx !important;
+    height: 200rpx !important;
+    /* overflow: auto; */
+    /* top:60%; */
+    left:50%;
+    /* padding:0; */
+    transform: translateX(-50%);
+    color:#fff
+}
+.heartWrapper.button-hover{
+    /* display: none; */
+    background-color: transparent;
+}
+.heartWrapper::after{
+    display: none;
+}
+.title{
+    display: inline-block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+ 
+    font-size: 15px;
+    /* line-height: 100%; */
+    /* background-color: #fff; */
+    animation: tiaodong 4s cubic-bezier(.44,1.1,.75,.22) infinite;
+    z-index: 9999;
+}
+.title::after{
+    content:'同意'
+}
+.heart,.heartTwo{
+    position: absolute;
+   
+}
+
+.heart{
+    
+    width:100%;
+    height:100%;
+    z-index: 99;
+    animation: tiaodong2 3s cubic-bezier(.52,1.28,.75,.22) infinite;
+}
+
+.heartTwo{
+    
+    opacity: 0.2;
+    width:100%;
+    height:100%;
+    
+    animation: tiaodong 4s cubic-bezier(.52,1.28,.75,.22) infinite;
+}
+
+
+@keyframes tiaodong{
+    0%{
+        opacity: 0.8;
+        transform: scale(1,1);
+    }
+    50%{
+        opacity: 0.6;
+        transform: scale(1.8,1.8);
+    }
+    100%{
+        opacity: 0.8;
+        transform: scale(1,1);
+    }
+}    
+
+
+@keyframes tiaodong2{
+    0%{
+        opacity: 0.8;
+        transform: scale(0.6,0.6);
+    }
+    50%{
+        opacity: 0.6;
+        transform: scale(1.6,1.6);
+    }
+    100%{
+        opacity: 0.8;
+        transform: scale(0.6,0.6);
+    }
+}    

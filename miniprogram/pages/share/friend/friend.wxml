@@ -1,0 +1,15 @@
+<!-- miniprogram/pages/share/friend/friend.wxml -->
+<!-- <text>miniprogram/pages/share/friend/friend.wxml</text> -->
+<view class="wrapper">
+    <view class='headerBox'>
+        <image class='img' src="{{userInfo.avatarUrl||'/images/defaultHead.jpeg'}}" />
+        <text class='text'>
+            {{userInfo.nickName||'XXX'}}邀请你成为{{userInfo.gender==1?'他':"她"}}的{{userInfo.gender==1?"女朋友":"男朋友"}}
+        </text>
+    </view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='heartWrapper'>
+        <image src='/images/heart.png' class='heart' />
+        <image src='/images/whiteHeart.png' class='heartTwo' />
+        <text class='title'></text>
+    </button>
+</view>

@@ -2,5 +2,6 @@
   "usingComponents": {
     "lovers":"/components/lovers/lovers"
   },
+  "enablePullDownRefresh":true,
   "navigationStyle":"custom"
 }

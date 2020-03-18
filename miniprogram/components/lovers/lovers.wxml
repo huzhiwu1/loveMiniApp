@@ -1,18 +1,26 @@
-<!--components/lovers/lovers.wxml-->
+<!-- components/lovers/lovers.wxml -->
+<wxs src="../../utils/getTime.wxs" module="time"/>
 <view class='wrapper'>
-    <lovers-head-img></lovers-head-img>
+    <view class='headWrapper'>
+        <avatar gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}"/>
+        <view class='center'>
+            <image src="/images/heart.png" class='heart' />
+            <image src="/images/whiteHeart.png" class='heartTwo' />
+        </view>
+        <avatar gender="{{lover.friend.gender}}" headImg="{{lover.friend.avatarUrl}}"/>
+    </view>
     <view class='nameBox'>
-        <view class='leftName'>胡志武(小程序，pc管理后台页面)</view>
-        <view class='rightName'>若易</view>
+        <view class='leftName'>{{userInfo.nickName}}</view>
+        <view class='rightName'>{{lover.friend.nickName||'null'}}</view>
     </view>
     <view class='note'>
         <view class='loveFor'>
             <text class='title'>相爱于</text>
-            <text class='info'>2019年10月15日</text>
+            <text class='info'>{{time.getTime(lover.starttime)||'null'}}</text>
         </view>
         <view class='time'>
             <text class='title'>记录时刻</text>
-            <text class='info'>3个</text>
+            <text class='info'>{{lover.notenum||'null'}}个</text>
         </view>
     </view>
 </view>

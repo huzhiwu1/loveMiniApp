@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "lovers-head-img":"/components/loversHeadImg/loversHeadImg"
+    "avatar":"/components/avatar/avatar"
   }
 }

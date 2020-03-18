@@ -22,10 +22,11 @@ App({
     this.getNaviagtionBarHeight()
     // 获取胶囊的宽度
     this.getMenuWidth()
-    // 用户登录
+    
 
   },
   onShow() {
+    // 用户登录
     this.getUserInfo()
   },
   getNaviagtionBarHeight() {
@@ -43,8 +44,12 @@ App({
   // 获取openId
   getUserInfo() {
     let that = this
-    let userInfo = wx.getStorageSync("userInfo")
-    if (!userInfo) {
+    // let app = getApp()
+    //let lovers =wx.getStorageSync("lovers")&& JSON.parse(wx.getStorageSync("lovers"))
+    //that.globalData.lovers = lovers
+    //let userInfo = wx.getStorageSync("userInfo")&&JSON.parse(wx.getStorageSync("userInfo"))
+    //if (!userInfo) {
+    let userInfo = null;
       wx.cloud.callFunction({
         name: "login"
       }).then(res => {
@@ -53,6 +58,25 @@ App({
         if (userInfo) {
           wx.setStorageSync("userInfo", JSON.stringify(userInfo))
           that.globalData.userInfo = userInfo
+          if(userInfo.commonid){
+            // 获取情侣信息
+             // 获取情侣资料
+          wx.cloud.callFunction({
+            name:"getLoverInfo",
+            data:{
+              companion:userInfo.companion,
+              _id:userInfo.commonid
+            }
+          }).then(res=>{
+            wx.setStorageSync("lovers",JSON.stringify(res.result))
+            that.globalData.lovers = res.result
+            // 跳转主页
+            // wx.hideLoading()
+            // wx.redirect({
+            //   url:"/mine/mine"
+            // })
+          })
+          }
         } else {
           // 主动获取用户信息
           // that.getUserOptions()
@@ -62,10 +86,12 @@ App({
           })
         }
       })
-    } else {
-      that.globalData.userInfo = userInfo
-    }
-  },
+    } 
+    // else {
+
+    //   that.globalData.userInfo = userInfo
+    // }
+  // },
   //  主动获取用户的头像，手机号，姓名等
   // getUserOptions() {
   //   // console.log(promisify,"pro")

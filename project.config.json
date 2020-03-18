@@ -64,6 +64,13 @@
 					"pathName": "pages/editDay/editDay",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/share/friend/friend",
+					"pathName": "pages/share/friend/friend",
+					"query": "openid=oV7gr5Mavaxb0WOE3wowCXnodAvo",
+					"scene": null
 				}
 			]
 		}

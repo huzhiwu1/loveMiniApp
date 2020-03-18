@@ -1,0 +1,13 @@
+module.exports.getTime=function(time){
+    var date = getDate(time)
+    var year = date.getFullYear()
+    var month = date.getMonth()+1
+    var day = date.getDate()
+    if(month<=9){
+        month="0"+month
+    }
+    if(day<=9){
+        day="0"+day
+    }
+    return ""+year+"-"+month+"-"+day
+}

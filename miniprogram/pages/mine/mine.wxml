@@ -1,12 +1,14 @@
 <!--miniprogram/pages/mine/mine.wxml-->
 <!-- <text>miniprogram/pages/mine/mine.wxml</text> -->
+
 <view class='wrapper'>
 <view  class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
     我的
 </view>
 <view class='body'>
-    <lovers wx:if="{{userInfo}}"></lovers>
-    <button class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <lovers wx:if="{{userInfo}}" userInfo="{{userInfo}}" lover="{{lovers}}"></lovers>
+    <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <button class="btn" wx:if="{{!userInfo.commonid&&userInfo}}" open-type="share" >邀请伴侣</button>
 </view>
      <view class='footer'>
         <view>山有木兮卿有意</view>

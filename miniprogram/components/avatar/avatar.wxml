@@ -1,4 +1,4 @@
 <!--components/avatar/avatar.wxml-->
-<view class="wrapper {{gender?'blue':'red'}}">
+<view class="wrapper {{gender==1?'blue':'red'}}">
     <image src="{{headImg}}" class='headImg' mode='aspectFit'/>
 </view>

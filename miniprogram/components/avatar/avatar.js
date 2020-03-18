@@ -7,10 +7,17 @@ Component({
     headImg:{
       type:String,
       value:'/images/defaultHead.jpeg',
+      observer:function(newVal,oldVal){
+        if(!newVal){
+          this.setData({
+            headImg:"/images/defaultHead.jpeg"
+          })
+        }
+      }
     },
     gender:{
-      type:Boolean,//true是男孩
-      value:true,
+      type:Number,//1是男孩
+      value:1,
     }
   },
 

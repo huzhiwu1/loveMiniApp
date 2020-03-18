@@ -3,11 +3,11 @@
     "pages/mine/mine",
     "pages/time/time",
     "pages/index/index",
-   
     "pages/addNote/addNote",
     "pages/markDay/markDay",
     "pages/editMarkDay/editMarkDay",
-    "pages/editDay/editDay"
+    "pages/editDay/editDay",
+    "pages/share/friend/friend"
   ],
   "permission": {
     "scope.userLocation": {
