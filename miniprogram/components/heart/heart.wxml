@@ -1,5 +1,5 @@
 <!-- components/heart/heart.wxml -->
-<view class='wrapper'>
+<view class='wrapper' animation="{{animationData}}" bindtap="missyou">
     <image  src='/images/heart.png' class='heart' />
     <image  src='/images/whiteHeart.png'class='heartTwo'/>
     <text class='title'></text>

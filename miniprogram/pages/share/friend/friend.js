@@ -21,6 +21,19 @@ Page({
       }
     }).then(res=>{
       let userInfo = res.result.data[0]
+      //如果这个人有情侣了，就不在显示邀请内容
+      if(userInfo.commonid){
+        wx.showToast({
+          title:(userInfo.gender==1?"他":"她")+"已经有"+userInfo.gender==1?"女朋友了":"男朋友了",
+          icon:"none",
+          success(){
+            wx.switchTab({
+              url:"../../mine/mine"
+            })
+          }
+        })
+        
+      }
       this.setData({
         userInfo,
       })
@@ -43,6 +56,12 @@ Page({
     }).then(res=>{
      
       userInfo = res.result.data[0]
+      // 如果用户本身是有情侣的，也自动跳转到我到那一页
+      if(userInfo.commonid){
+        wx.switchTab({
+          url:"../../mine/mine"
+        })
+      }
       if (userInfo) {
         wx.setStorageSync("userInfo", JSON.stringify(userInfo))
         app.globalData.userInfo = userInfo

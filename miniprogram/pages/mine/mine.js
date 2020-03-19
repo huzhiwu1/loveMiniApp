@@ -17,13 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const app = getApp()
-    this.setData({
-      navigationBarHeight:app.globalData.navigationBarHeight,
-      menuWidth:app.globalData.menuWidth,
-      userInfo:app.globalData.userInfo,
-      lovers:app.globalData.lovers
-    })
+    this.login()
   },
 
   /**
@@ -67,19 +61,22 @@ Page({
             that.setData({
               lovers:res.result
             })
-            app.globalData.lovers = res 
+            app.globalData.lovers = res.result 
             // 跳转主页
             wx.hideLoading()
             // wx.hideLoading()
             // wx.redirect({
             //   url:"/mine/mine"
             // })
+          }).finally(res=>{
+            wx.stopPullDownRefresh()
+            wx.hideLoading()
           })
         }else{
           wx.hideLoading()
         }
       }else{
-        // wx.hideLoading()
+        wx.hideLoading()
       } 
     }).finally(res=>{
       wx.stopPullDownRefresh()
@@ -111,7 +108,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.login()
+    // this.login()
+    const app = getApp()
+    this.setData({
+      navigationBarHeight:app.globalData.navigationBarHeight,
+      menuWidth:app.globalData.menuWidth,
+      userInfo:app.globalData.userInfo,
+      lovers:app.globalData.lovers
+    })
   },
 
   /**

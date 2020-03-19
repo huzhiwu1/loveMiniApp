@@ -10,6 +10,7 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   let userInfo = {
     ...event,
+    missyoutime:null,
     openid:wxContext.OPENID,
     birthday:null,
     companion:null,//伴侣的openid

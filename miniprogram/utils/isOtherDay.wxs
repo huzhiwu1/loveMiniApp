@@ -1,0 +1,4 @@
+module.exports.otherDay=function(time){
+    if(!time) return true
+    return getDate().toLocaleDateString()!=getDate(time).toLocaleDateString()
+}

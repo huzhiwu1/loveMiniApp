@@ -1,16 +1,17 @@
 <!-- miniprogram/pages/index/index.wxml -->
+<wxs src="../../utils/isOtherDay.wxs" module="time"/>
 <image class='bg' src='/images/bg.jpeg'></image>
 <view class='wrapper'>
     <view class='header' style="margin-top:{{navigationBarHeight}}px;padding-right:{{menuWidth}}px">
         老胡和小茵子的恋爱时光
     </view>
     <opacity-wrap class='headImgWrap'>
-        <avatar slot='left' />
-        <how-long slot='center' />
-        <avatar slot='right' />
+        <avatar slot='left' gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}" />
+        <how-long slot='center' howLong="{{lovers.starttime}}" />
+        <avatar slot='right'  gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}" />
     </opacity-wrap>
-    <heart class='heart'></heart>
-    <intimacy-num class='ntimacyNum'></intimacy-num>
+    <heart class='heart' wx:if="{{time.otherDay(userInfo.missyoutime)}}" bindmissyou="missyou" bindtap="sendMiss"></heart>
+    <intimacy-num num="{{lovers.honeyNum}}" class='ntimacyNum'></intimacy-num>
     <view class='footer'>
         <action-button class='itemOne' num='{{5}}' type='{{"date"}}' title='纪念日' imgUrl='/images/date.png' />
         <action-button class='itemTwo' num='{{5}}' type='{{"note"}}' title='小情话' imgUrl='/images/notes.png' />

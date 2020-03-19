@@ -5,8 +5,11 @@ Component({
    */
   properties: {
     howLong:{
-      type:Number,
-      value:0
+      type:[Number,String],
+      value:0,
+      observer(newVal,oldVal){
+        console.log(newVal,"chuanjinglao")
+      }
     }
   },
 

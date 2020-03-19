@@ -20,7 +20,7 @@
         </view>
         <view class='time'>
             <text class='title'>记录时刻</text>
-            <text class='info'>{{lover.notenum||'null'}}个</text>
+            <text class='info'>{{lover.notenum}}个</text>
         </view>
     </view>
 </view>

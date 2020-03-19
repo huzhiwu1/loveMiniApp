@@ -11,3 +11,16 @@ module.exports.getTime=function(time){
     }
     return ""+year+"-"+month+"-"+day
 }
+module.exports.howDayNum=function(time){
+    // console.log(time,"time")
+    if(!time){
+        return 0;
+    }
+    var dateTime = getDate(time).getTime()
+    var newTime = getDate().getTime()
+    // console.log(dateTime,"DATEtIME")
+    var minTime = newTime-dateTime
+   
+    var dayNum = Math.ceil(minTime/(24*60*60*1000))
+    return dayNum
+}

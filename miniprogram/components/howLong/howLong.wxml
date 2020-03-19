@@ -1,8 +1,9 @@
 <!--components/howLong/howLong.wxml-->
+<wxs src="../../utils/getTime.wxs" module="time"/>
 <view class='wrapper'>
     <view class='title'>在一起已经</view>
     <view class='time'>
-        <text class='dayNum'>{{howLong}}</text>
+        <text class='dayNum'>{{time.howDayNum(howLong)}}</text>
         <text>天</text>
     </view>
 </view>

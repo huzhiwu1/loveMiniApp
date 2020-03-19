@@ -13,7 +13,8 @@ exports.main = async (event, context) => {
     let {_id} = await db.collection('lovers').add({
       data:{
         loversid:[openid,myopenid],
-        notenumm:0,
+        notenum:0,
+        honeyNum:0,
         starttime:new Date()
       }
     })
@@ -41,13 +42,5 @@ exports.main = async (event, context) => {
     
   }catch(err){
     console.log(err,"belovers")
-  }
-
-
-  return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
   }
 }
