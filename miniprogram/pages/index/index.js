@@ -44,6 +44,7 @@ Page({
   getUserInfo(){
     let app = getApp()
     let that = this
+    let userInfo = null
     wx.cloud.callFunction({
       name:"login"
     }).then(res=>{
@@ -111,7 +112,7 @@ Page({
               nickName
             }
           }).then(res=>{
-            wx.hideLoading()
+            // wx.hideLoading()
             // 
             wx.showToast({
               title:"已告知"+(that.data.lovers.friend.nickName)+"你想"+(that.data.lovers.friend.gender==1?"他":"她"),
@@ -130,7 +131,7 @@ Page({
             })*/
           }).catch(err=>{
             console.log(err,"Err")
-            wx.hideLoading()
+            // wx.hideLoading()
            
               wx.showToast({
                 title:"对方未订阅消息，不能将信息传达",
@@ -138,11 +139,13 @@ Page({
               })
             
           }).finally(res=>{
+            wx.hideLoading()
             that.getUserInfo()
           })
         }
       },
       fail(err){
+        wx.hideLoading()
         wx.showToast({
           title:"请点右上角三个小点开启消息订阅",
           icon:"none"
