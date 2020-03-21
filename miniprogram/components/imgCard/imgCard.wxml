@@ -1,8 +1,9 @@
 <!--components/imgCard/imgCard.wxml-->
 <view class='wrapper'>
     <view class='loverHead'>
-         <avatar class='boy' gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}"/>
-    <avatar class='girl' gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}"/>
+         <avatar class='boy' gender="{{userInfo.gender==1?userInfo.gender:lovers.friend.gender}}"  headImg="{{userInfo.gender==1?userInfo.avatarUrl:lovers.friend.avatarUrl}}"/>
+
+    <avatar class='girl' gender="{{lovers.friend.gender==2?lovers.friend.gender:userInfo.gender}}" headImg="{{lovers.friend.gender==2?lovers.friend.avatarUrl:userInfo.avatarUrl}}"/>
     </view>
     <image  class='bgImg'src='{{bgImg}}' />
     <view class='infoBox'>

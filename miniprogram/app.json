@@ -7,7 +7,8 @@
     "pages/markDay/markDay",
     "pages/editMarkDay/editMarkDay",
     "pages/editDay/editDay",
-    "pages/share/friend/friend"
+    "pages/share/friend/friend",
+    "pages/articleInfo/articleInfo"
   ],
   "permission": {
     "scope.userLocation": {

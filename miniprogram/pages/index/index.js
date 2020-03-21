@@ -42,7 +42,31 @@ Page({
       menuWidth:app.globalData.menuWidth,
       userInfo:app.globalData.userInfo,
       lovers:app.globalData.lovers,
-      markDayNum:app.globalData.markDayNum 
+      // markDayNum:app.globalData.markDayNum 
+    },()=>{
+      this.getMarkDayNum()
+    })
+
+  },
+  getMarkDayNum(){
+    const app = getApp()
+    let that = this
+    if(!that.data.lovers._id || !app.globalData.lovers._id){
+      return ;
+    }
+    
+    wx.cloud.callFunction({
+      name:"getMarkDayNum",
+      data:{
+        loverId: that.data.lovers._id || app.globalData.lovers._id
+      }
+    }).then(res=>{
+      const total = res.result.total
+      that.setData({
+        markDayNum:total
+      })
+      app.globalData.markDayNum=total
+      wx.setStorageSync("markDayNum",total)
     })
   },
   

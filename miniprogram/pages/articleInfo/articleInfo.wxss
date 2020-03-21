@@ -1,0 +1,82 @@
+/* miniprogram/pages/articleInfo/articleInfo.wxss */
+page{
+    background-color: #fff;
+}
+.wrapper{
+    width:100%;
+}
+.userInfo{
+    box-sizing: border-box;
+    padding:10rpx 30rpx;
+    width:100%;
+    display: flex;
+}
+.nameBox{
+    margin-left:30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.name{
+    font-weight: 600;
+    margin-bottom:5rpx;
+
+}
+.time{
+    font-size: 25rpx;
+    color:#bfbfbf;
+}
+.textarea{
+    /* height:auto; */
+    /* margin:30rpx; */
+    padding:30rpx;
+    color: #aaa;
+    font-size: 30rpx;
+}
+.footer{
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30rpx;
+    color: #aaa;
+}
+.localBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width:40rpx;
+    height:40rpx;
+}
+.localTitle{
+
+    margin-left:10rpx;
+}
+.imgBox{
+    box-sizing: border-box;
+    padding:30rpx;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.articleImgBox{
+    width:30%;
+    margin-right: 3%;
+    /* height:100%; */
+    padding-top:30%;
+    position: relative;
+}
+.articleImg{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 5rpx;
+}

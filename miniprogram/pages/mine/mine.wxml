@@ -6,9 +6,9 @@
     我的
 </view>
 <view class='body'>
-    <lovers wx:if="{{userInfo}}" userInfo="{{userInfo}}" lover="{{lovers}}"></lovers>
+    <lovers wx:if="{{userInfo._id}}" beginTime="{{beginTime}}" userInfo="{{userInfo}}" lover="{{lovers}}" articleNum="{{articleNum}}"></lovers>
     <button class="btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
-    <button class="btn" wx:if="{{!userInfo.commonid&&userInfo}}" open-type="share" >邀请伴侣</button>
+    <button class="btn" wx:if="{{!userInfo.commonid&&userInfo._id}}" open-type="share" >邀请伴侣</button>
 </view>
      <view class='footer'>
         <view>山有木兮卿有意</view>

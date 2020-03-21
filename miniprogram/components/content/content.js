@@ -29,6 +29,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    gotoArticleInfo(){
+      wx.navigateTo({
+        url:"../../pages/articleInfo/articleInfo?_id="+this.data.content._id
+      })
+    }
   }
 })

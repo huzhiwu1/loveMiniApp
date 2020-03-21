@@ -1,7 +1,8 @@
 /* components/imgCard/imgCard.wxss */
 .wrapper{
     width:100%;
-    height:450rpx;
+    /* height:450rpx; */
+    padding-top: 74%;
     position: relative;
     margin-bottom: 10rpx;
 }
@@ -18,6 +19,10 @@
     margin-left: 85rpx;
 }
 .bgImg{
+    position: absolute;
+    top:0;
+    z-index: -11;
+    left:0;
     width:100%;
     height:100%;
 }

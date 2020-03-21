@@ -14,25 +14,40 @@ Component({
       //   }
       // }
     },
+    articleNum:{
+      type:Number,
+      value:0
+    },
     lover:{
       type:Object,
       value:{},
       observer(newVal,oldVal){
-        if(!newVal)return 
-        console.log(newVal,"val")
-        const _id = newVal.starttime
-        wx.cloud.callFunction({
-          name:"getOneMarkDay",
-          data:{
-            _id
-          }
-        }).then(res=>{
-          const data = res.result.data[0]
-          this.setData({
-            beginTime:data.beginTime
-          })
-        })
+        // let that = this
+        // console.log(that.data,"Data")
+        // if(!newVal||!newVal.starttime){return;} 
+        // console.log(newVal,"val")
+        // const _id = newVal.starttime
+        // wx.cloud.callFunction({
+        //   name:"getOneMarkDay",
+        //   data:{
+        //     _id
+        //   }
+        // }).then(res=>{
+        //   console.log(res,"Res")
+        //   const data = res.result.data[0]
+        //   console.log(data.beginTime,"be")
+        //   const beginTime= data.beginTime
+        //   that.setData({
+        //     beginTime,
+        //   },()=>{
+        //     console.log(that.data.beginTime,"begintime")
+        //   })
+        // })
       }
+    },
+    beginTime:{
+      type:String,
+      value:""
     }
   },
 
@@ -40,7 +55,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    beginTime:null,
+   
   },
 
   /**

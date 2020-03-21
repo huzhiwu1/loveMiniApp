@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "avatar":"/components/avatar/avatar"
+  },
+  "navigationBarTitleText":"查看时刻",
+  "navigationBarBackgroundColor":"#fff",
+  "navigationBarTextStyle":"black"
+}

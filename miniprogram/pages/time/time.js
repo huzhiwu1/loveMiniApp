@@ -61,36 +61,42 @@ Page({
       
       navigationBarHeight:this.globalData.navigationBarHeight,
       menuWidth:this.globalData.menuWidth,
-      userInfo:this.globalData.userInfo||JSON.parse(wx.getStorageSync("userInfo")),
-      lovers:this.globalData.lovers||JSON.parse(wx.getStorageSync("lovers"))
+      userInfo:this.globalData.userInfo||JSON.parse(wx.getStorageSync("userInfo")||"{}"),
+      lovers:this.globalData.lovers||JSON.parse(wx.getStorageSync("lovers")||"{}")
     },()=>{
-      wx.cloud.callFunction({
-        name:"getArticleNum",
-        data:{
-          loversId:that.data.userInfo.commonid
-        }
-      }).then(res=>{
-        const total = res.result.total
-        // console.log(res,"res")
-        that.setData({
-          articleNum:total
-        })
-      })
+      if(that.data.lovers._id){
+        wx.cloud.callFunction({
+          name:"getArticleNum",
+          data:{
+            loversId:that.data.userInfo.commonid
+          }
+        }).then(res=>{
+          const total = res.result.total
+          // console.log(res,"res")
+          that.setData({
+            articleNum:total
+          })
 
-      // 获取文章
-      wx.cloud.callFunction({
-        name:"getArticle",
-        data:{
-          loversId:that.data.userInfo.commonid,
-          pageNum:that.data.pagination.current,
-          pageSize:that.data.pagination.pageSize
-        }
-      }).then(res=>{
-        const data = res.result.data;
-        that.setData({
-          articleList:data
         })
-      })
+        // 获取文章
+        wx.cloud.callFunction({
+          name:"getArticle",
+          data:{
+            loversId:that.data.userInfo.commonid,
+            pageNum:that.data.pagination.current,
+            pageSize:that.data.pagination.pageSize
+          }
+        }).then(res=>{
+          const data = res.result.data;
+          that.setData({
+            articleList:data
+          })
+        })
+      }
+    
+
+      
+      
     })
    
   },

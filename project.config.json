@@ -83,42 +83,55 @@
 					"id": -1,
 					"name": "pages/test/test",
 					"pathName": "pages/test/test",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/editDay/editDay",
 					"pathName": "pages/editDay/editDay",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/editMarkDay/editMarkDay",
 					"pathName": "pages/editMarkDay/editMarkDay",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/markDay/markDay",
 					"pathName": "pages/markDay/markDay",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/markDay/markDay",
 					"pathName": "pages/markDay/markDay",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/editDay/editDay",
 					"pathName": "pages/editDay/editDay",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/addNote/addNote",
 					"pathName": "pages/addNote/addNote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/articleInfo/articleInfo",
+					"pathName": "pages/articleInfo/articleInfo",
 					"scene": null
 				}
 			]

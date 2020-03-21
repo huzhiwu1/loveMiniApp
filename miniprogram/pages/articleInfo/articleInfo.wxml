@@ -1,0 +1,35 @@
+<!--miniprogram/pages/articleInfo/articleInfo.wxml-->
+<!-- <text>miniprogram/pages/articleInfo/articleInfo.wxml</text> -->
+<wxs module="time">
+    function getTimeType(time){
+        var year = time.substring(0,5)+"年"
+        var month = time.substring(5,7)+"月"
+        var day = time.substring(8)+"日"
+        return year + month+day
+    }
+</wxs>
+<view class="wrapper">
+    <view class="userInfo">
+        <avatar gender="{{content.userList[0].gender}}" headImg="{{content.userList[0].avatarUrl}}"/>
+        <view class="nameBox">
+
+            <text class="name">{{content.userList[0].nickName||"胡志武(小程序，pc管理后台页面)"}}</text>
+            <text class="time">{{time.getTimeType(content.date)||"2020年03月21日"}}</text>
+           
+        </view>
+    </view>
+    <textarea auto-height="{{true}}" value="{{content.textInput||'你你好好好'}}" class="textarea" disabled="{{true}}"></textarea>
+    <view class="imgBox">
+        <view class="articleImgBox" wx:for="{{content.imgList}}" >
+            <image  src="{{item}}" class="articleImg" />
+        </view>
+        
+    </view>
+    <view class="footer">
+        <view class="localBox">
+            <image src="/images/local.png"  class="img"/>
+            <text class="localTitle">{{content.street_number||"北环大道"}}</text>
+        </view>
+        <image src="/images/love.png" class="img"/>
+    </view>
+</view>

@@ -2,7 +2,7 @@
 .wrapper{
     width:100%;
     display: flex; 
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     position: relative;
@@ -16,7 +16,7 @@
 }
 .imgBox{
     width:31%;
-    /* margin-top: 10px; */
+    /* margin-top: 10px; */margin-right:2%;
     margin-bottom: 10rpx;
     padding-top: 31%;
     /* height:30%; */

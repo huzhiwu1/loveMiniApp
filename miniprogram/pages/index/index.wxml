@@ -6,9 +6,11 @@
         老胡和小茵子的恋爱时光
     </view>
     <opacity-wrap class='headImgWrap'>
-        <avatar slot='left' gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}" />
+        <avatar slot='left' gender="{{userInfo.gender}}" wx:if="{{userInfo.gender==1}}" headImg="{{userInfo.avatarUrl}}" />
+         <avatar slot='left'  gender="{{lovers.friend.gender}}" wx:else headImg="{{lovers.friend.avatarUrl}}" />
         <how-long slot='center' howLong="{{lovers}}" />
-        <avatar slot='right'  gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}" />
+        <avatar slot='right' wx:if="{{userInfo.gender==1}}" gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}" />
+        <avatar slot='right' gender="{{userInfo.gender}}" wx:else headImg="{{userInfo.avatarUrl}}" />
     </opacity-wrap>
     <heart class='heart' wx:if="{{time.otherDay(userInfo.missyoutime)}}" bindmissyou="missyou" bindtap="sendMiss"></heart>
     <intimacy-num num="{{lovers.honeyNum}}" class='ntimacyNum'></intimacy-num>

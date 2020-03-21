@@ -1,8 +1,6 @@
 <!--components/content/content.wxml-->
 <view class='wrapper'>
-    <view class='write'>
-        {{content.textInput}}
-    </view>
+    <text  class='write'bindtap="gotoArticleInfo">{{content.textInput}}</text>
     <view class='picBox'>
         <img-content imgList="{{content.imgList}}"/>
     </view>

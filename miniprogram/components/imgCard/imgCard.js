@@ -6,7 +6,7 @@ Component({
   properties: {
     bgImg:{
       type:String,
-      value:'http://img3.imgtn.bdimg.com/it/u=263595599,2238086656&fm=26&gp=0.jpg'
+      value:'/images/timeBg.jpg'
     },
     noteNum:{
       type:String,
