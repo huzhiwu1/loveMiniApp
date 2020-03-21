@@ -3,7 +3,7 @@
 <view class='wrapper'>
     <view class='title'>在一起已经</view>
     <view class='time'>
-        <text class='dayNum'>{{time.howDayNum(howLong)}}</text>
+        <text class='dayNum'>{{time.howDayNum(beginTime)}}</text>
         <text>天</text>
     </view>
 </view>

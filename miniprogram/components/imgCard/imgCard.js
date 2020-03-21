@@ -11,6 +11,14 @@ Component({
     noteNum:{
       type:String,
       value:0
+    },
+    lovers:{
+      type:Object,
+      value:{}
+    },
+    userInfo:{
+      type:Object,
+      value:{}
     }
   },
 
@@ -20,7 +28,15 @@ Component({
   data: {
 
   },
-
+  lifetimes:{
+    // attached(){
+    //   const app = getApp()
+    //   this.setData({
+    //     lovers:app.globalData.lovers||JSON.parse(wx.getStorageSync("lovers")),
+    //     userInfo:app.globalData.userInfo||JSON.parse(wx.getStorageSync("userInfo"))
+    //   })
+    // }
+  },
   /**
    * 组件的方法列表
    */

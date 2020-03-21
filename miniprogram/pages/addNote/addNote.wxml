@@ -1,6 +1,6 @@
 <!--miniprogram/pages/addNote/addNote.wxml-->
 <view class='wrapper'>
-    <time-picker></time-picker>
+    <time-picker bindselectTime="selectTime"></time-picker>
     <view class='textBox'>
         <textarea 
         maxlength="-1"
@@ -12,7 +12,7 @@
         placeholder='记录下老胡和小茵子的甜蜜时刻！'/>
        
         <view class='emojiBox'>
-             <emoji-picker/>
+             <emoji-picker bindselectEmoji="selectEmoji"/>
              <view class='wordNum'>{{wordNum}}</view>
         </view>
         

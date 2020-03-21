@@ -19,6 +19,10 @@ Component({
     imgUrl:{
       type:String,
       value:'/images/question.png'
+    },
+    url:{
+      type:String,
+      value:""
     }
   },
 
@@ -42,6 +46,12 @@ Component({
       animation.scale(1.2,1.2).step().scale(1,1).step()
       this.setData({
         animationData:animation.export()
+      },()=>{
+        this.data.url&&setTimeout(()=>{
+          wx.navigateTo({
+            url:this.data.url
+          })
+        },500)
       })
     }
   }

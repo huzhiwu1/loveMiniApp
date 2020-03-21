@@ -1,8 +1,8 @@
 <!--components/imgCard/imgCard.wxml-->
 <view class='wrapper'>
     <view class='loverHead'>
-         <avatar class='boy'/>
-    <avatar class='girl'/>
+         <avatar class='boy' gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}"/>
+    <avatar class='girl' gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}"/>
     </view>
     <image  class='bgImg'src='{{bgImg}}' />
     <view class='infoBox'>

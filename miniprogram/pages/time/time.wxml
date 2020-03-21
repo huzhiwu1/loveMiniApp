@@ -1,9 +1,14 @@
-<!--miniprogram/pages/time /time.wxml-->
+<!-- miniprogram/pages/time /time.wxml -->
 <view class='wrapper'>
-    <img-card/>
-    <time-line>
-        <view slot='dot'>😃</view>
-        <content slot='content'/>
-    </time-line>
-    <image animation='{{animationData}}' src='/images/add.png'class='addImg' bindtap='addNote' />
+    <img-card userInfo="{{userInfo}}" lovers="{{lovers}}" noteNum="{{articleNum}}" />
+   
+    <block wx:for="{{articleList}}" wx:key="_id">
+        <time-line dateNum="{{item.date}}">
+            <!-- <view slot='dot'> -->
+            <image slot="dot" src="{{item.emojiImg}}" style="width:100%;height:100%" />
+            <!-- </view> -->
+            <content slot='content' content="{{item}}"/>
+        </time-line>
+    </block>
+    <image animation='{{animationData}}' src='/images/add.png' class='addImg' bindtap='addNote' />
 </view>

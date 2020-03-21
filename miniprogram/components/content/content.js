@@ -5,17 +5,17 @@ Component({
    */
   properties: {
     content:{
-      type:String,
-      value:'你好你过还和个你好你过还和个你好你过还和个你好你过还和个你好你过还和个你好你过还和个你好你过还和个'
+      type:Object,
+      value:{}
     },
-    local:{
-      type:String,
-      value:'北环大道'
-    },
-    loveNum:{
-      type:Number,
-      value:1
-    }
+    // local:{
+    //   type:String,
+    //   value:'北环大道'
+    // },
+    // loveNum:{
+    //   type:Number,
+    //   value:1
+    // }
   },
 
   /**

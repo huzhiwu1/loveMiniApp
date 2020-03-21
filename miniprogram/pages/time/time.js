@@ -8,23 +8,28 @@ Page({
     navigationBarHeight:0,
     menuWidth:0,
     animationData:{},
+    lovers:{},
+    userInfo:{},
+    articleNum:0,
+    articleList:[],
+    pagination:{
+      total:0,
+      current:1,
+      pageSize:10
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const app = getApp()
+    this.globalData= getApp()
     let animation= wx.createAnimation({
       duration:500,
       timingFunction:'ease-in-out'
     })
     this.animation=animation
-    this.setData({
-      
-      navigationBarHeight:app.globalData.navigationBarHeight,
-      menuWidth:app.globalData.menuWidth
-    })
+   
   },
 
   addNote(){
@@ -51,7 +56,43 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let that = this
+    this.setData({
+      
+      navigationBarHeight:this.globalData.navigationBarHeight,
+      menuWidth:this.globalData.menuWidth,
+      userInfo:this.globalData.userInfo||JSON.parse(wx.getStorageSync("userInfo")),
+      lovers:this.globalData.lovers||JSON.parse(wx.getStorageSync("lovers"))
+    },()=>{
+      wx.cloud.callFunction({
+        name:"getArticleNum",
+        data:{
+          loversId:that.data.userInfo.commonid
+        }
+      }).then(res=>{
+        const total = res.result.total
+        // console.log(res,"res")
+        that.setData({
+          articleNum:total
+        })
+      })
 
+      // 获取文章
+      wx.cloud.callFunction({
+        name:"getArticle",
+        data:{
+          loversId:that.data.userInfo.commonid,
+          pageNum:that.data.pagination.current,
+          pageSize:that.data.pagination.pageSize
+        }
+      }).then(res=>{
+        const data = res.result.data;
+        that.setData({
+          articleList:data
+        })
+      })
+    })
+   
   },
 
   /**

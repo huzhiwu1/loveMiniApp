@@ -5,17 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dayName:"在一起",
-    isDownTime:false,
-    dayNum:100,
-    targetDay:'2020年04月10日',
+    // dayName:"在一起",
+    // isDownTime:false,
+    // dayNum:100,
+    // targetDay:'2020年04月10日',
+    markDay:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const {_id}= options
+    this.setData({
+      _id
+    })
+   
   },
 
   /**
@@ -24,12 +29,29 @@ Page({
   onReady: function () {
 
   },
-
+  
+  gotoEdit(){
+    wx.navigateTo({
+      url:"/pages/editDay/editDay?_id="+this.data.markDay._id
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this
+    const {_id} = this.data
+    wx.cloud.callFunction({
+      name:"getOneMarkDay",
+      data:{
+        _id
+      }
+    }).then(res=>{
+      const data = res.result.data[0]
+      that.setData({
+        markDay:data
+      })
+    })
   },
 
   /**

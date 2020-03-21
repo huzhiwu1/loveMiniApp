@@ -4,8 +4,8 @@
          <image wx:if="{{selectedEmoji}}" class='img'bindtap='showEmoji'  src='{{selectedEmoji}}' />
     </view>
     <view animation='{{animationData}}' class='emojiBox'>
-        <image class='img' bindtap='selectEmoji' data-url='/images/smile.png' src='/images/smile.png' />
-        <image class='img' bindtap='selectEmoji' src='/images/moving.png' data-url='/images/moving.png' />
-        <image class='img' bindtap='selectEmoji' src='/images/cry.png' data-url='/images/cry.png'/>
+        <image class='img' bindtap='selectEmoji' data-feeling="smile" data-url='/images/smile.png' src='/images/smile.png' />
+        <image class='img' bindtap='selectEmoji' data-feeling="moving" src='/images/moving.png' data-url='/images/moving.png' />
+        <image class='img' bindtap='selectEmoji' data-feeling="cry" src='/images/cry.png' data-url='/images/cry.png'/>
     </view>
 </view>

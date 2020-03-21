@@ -1,13 +1,14 @@
 <!-- <text>假比上班更</text> -->
+<wxs src="../../utils/getTime.wxs" module="time"/>
 <view class='wrapper'>
     <view class='left'>
-        <text class='name'>{{dayName}}还有</text>
+        <text class='name'>{{recentlyMarkDay.name}}{{recentlyMarkDay.isDownTime?" 还有":" 已有"}}</text>
         <view class='dayBox'>
-            <text class='num'>{{dayNum}}</text>
+            <text class='num'>{{recentlyMarkDay.isDownTime?time.howDayNum(recentlyMarkDay.targetDay):time.howDayNum(recentlyMarkDay.beginTime)}}</text>
             <text class='day'>天</text>
         </view>
         <view class='target'>
-            目标日：{{targetDay}}
+           {{recentlyMarkDay.isDownTime?"目标日："+recentlyMarkDay.targetDay:"起始日: "+recentlyMarkDay.beginTime}}
         </view>
     </view>
     <view class='right'>

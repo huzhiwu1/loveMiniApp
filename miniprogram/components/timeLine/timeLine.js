@@ -4,14 +4,30 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    month:{
+    // month:{
+    //   type:String,
+    //   value:'02',
+    //   observer(newVal){
+    //     console.log(typeof newVal)
+    //     console.log(newVal)
+    //     return newVal+"月"
+    //   }
+    // },
+    // day:{
+    //   type:String,
+    //   value:'19'
+    // },
+    dateNum:{
       type:String,
-      value:'02月'
-    },
-    day:{
-      type:String,
-      value:'19'
-    },
+      value:"",
+      observer(newVal){
+        console.log(newVal,"vale")
+        this.setData({
+          month:newVal.substring(5,7)+"月",
+          day:newVal.substring(8)
+        })
+      }
+    }
     
   },
   options:{
@@ -22,6 +38,8 @@ Component({
    * 组件的初始数据
    */
   data: {
+    month:"",
+    day:"",
     emoji:escape("😃")
   },
   lifetimes:{

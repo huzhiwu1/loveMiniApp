@@ -12,12 +12,15 @@ Page({
     userInfo:{},
     lovers:{},
     animationData:{},
+    markDayNum:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const app = getApp()
+    this.globalData=app.globalData
     
   },
 
@@ -27,7 +30,7 @@ Page({
   onReady: function () {
 
   },
-
+  
   /**
    * 生命周期函数--监听页面显示
    */
@@ -38,9 +41,11 @@ Page({
       navigationBarHeight:app.globalData.navigationBarHeight,
       menuWidth:app.globalData.menuWidth,
       userInfo:app.globalData.userInfo,
-      lovers:app.globalData.lovers
+      lovers:app.globalData.lovers,
+      markDayNum:app.globalData.markDayNum 
     })
   },
+  
   getUserInfo(){
     let app = getApp()
     let that = this
@@ -100,7 +105,7 @@ Page({
     if(!openid||!commonid) return;
     let that = this
     wx.requestSubscribeMessage({
-      tmplIds:["lbl-AVfCPL1Q-DP_mkp4mJEn5ZUTgaIwpEejZVKNecU"],
+      tmplIds:["lbl-AVfCPL1Q-DP_mkp4mJEn5ZUTgaIwpEejZVKNecU","eUJ8Y3rSDHCetdZiBI-oL7zNnbbgWxcFkUKW0u0Uwtk"],
       success(res){
         if(res["lbl-AVfCPL1Q-DP_mkp4mJEn5ZUTgaIwpEejZVKNecU"]==="accept"){
           wx.cloud.callFunction({
@@ -112,7 +117,7 @@ Page({
               nickName
             }
           }).then(res=>{
-            // wx.hideLoading()
+            wx.hideLoading()
             // 
             wx.showToast({
               title:"已告知"+(that.data.lovers.friend.nickName)+"你想"+(that.data.lovers.friend.gender==1?"他":"她"),
@@ -130,16 +135,17 @@ Page({
               app.globalData.lovers=that.data.lovers
             })*/
           }).catch(err=>{
-            console.log(err,"Err")
-            // wx.hideLoading()
+            // console.log(err,"Err")
+            wx.hideLoading()
            
               wx.showToast({
                 title:"对方未订阅消息，不能将信息传达",
-                icon:"none"
+                icon:"none",
+                duration:2000,
               })
             
           }).finally(res=>{
-            wx.hideLoading()
+            // wx.hideLoading()
             that.getUserInfo()
           })
         }

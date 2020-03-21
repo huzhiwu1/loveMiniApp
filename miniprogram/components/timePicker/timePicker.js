@@ -60,6 +60,10 @@ Component({
         day,
         weekDay,
         date
+      },()=>{
+        this.triggerEvent("selectTime",{
+          date
+        })
       })
     }
   }

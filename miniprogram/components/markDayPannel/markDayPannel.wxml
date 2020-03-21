@@ -1,13 +1,15 @@
 <!-- components/markDayPannel/markDayPannel.wxml -->
 <!-- <text>components/markDayPannel/markDayPannel.wxml</text> -->
-<view class='wrapper'>
+<wxs src="../../utils/getTime.wxs" module="time"/>
+<view class='wrapper' bindtap="gotoEditMarkDay">
     <view class='nameBox'>
+   
         <image class='icon' src='{{icon}}' />
-        <view class='name'>{{name}}</view>
-        <view>{{isDownTime?'还有':"已有"}}</view>
+        <view class='name'>{{markDay.name}}</view>
+        <view>{{markDay.isDownTime?'还有':"已有"}}</view>
     </view>
     <view class='time'>
-        <view wx:if='{{day}}'>{{day}}天</view>
+        <view wx:if='{{markDay.beginTime||markDay.targetDay}}'>{{markDay.isDownTime?time.howDayNum(markDay.targetDay):time.howDayNum(markDay.beginTime)}}天</view>
         <image class='add' wx:else src='/images/addCircle.png' />
     </view>
 </view>

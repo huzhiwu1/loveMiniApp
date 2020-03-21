@@ -1,0 +1,10 @@
+{
+    "name":"纪念日",
+    "isDownTime":"倒数日？true:false",
+    "remind":"提醒时间，-1，0，1，2，",
+    "beginTime":"其实日",
+    "targetDay":"目标日",
+    "sendMessageDay":"发送消息的时间",
+    "loverId":"情侣id",
+    "remindPeople":"[提醒人openid]"
+}

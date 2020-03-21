@@ -2,6 +2,7 @@
 .wrapper{
     width:100%;
     display:flex;
+    margin:10rpx 0;
     padding: 0 25rpx;
     justify-content: flex-start;
     align-items:stretch;
@@ -60,6 +61,7 @@
 }
 .content{
     width:564rpx;
+    padding-top:18rpx;
     box-sizing: border-box;
     padding-left:10rpx;
 }

@@ -1,0 +1,9 @@
+{
+    "triggers":[
+        {
+            "name":"sendMessageInTime",
+            "type":"timer",
+            "config":"* 30 9 * * 0-6 *"
+        }
+    ]
+}

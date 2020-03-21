@@ -1,6 +1,7 @@
 <!-- components/timeLine/timeLine.wxml -->
 <view class='wrapper'>
     <view class='monthAndDay'>
+
         <view class='month'>{{month}}</view>
         <view class='day'>{{day}}</view>
     </view>

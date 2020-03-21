@@ -62,6 +62,7 @@ Page({
               lovers:res.result
             })
             app.globalData.lovers = res.result 
+            that.getMarkDayNum()
             // 跳转主页
             wx.hideLoading()
             // wx.hideLoading()
@@ -103,6 +104,25 @@ Page({
       wx.hideLoading()
     })
     // 登录，看
+  },
+  getMarkDayNum(){
+    const app = getApp()
+    wx.cloud.callFunction({
+      name:"getMarkDayNum",
+      data:{
+        loverId:app.globalData.lovers._id
+      }
+    }).then(res=>{
+      // console.log(res,"datare")
+      const data = res.result.total
+      // const app = getApp()
+      // console.log(data,"Data")
+      app.globalData.markDayNum = data
+      wx.setStorageSync('markDayNum',data)
+      this.setData({
+        markDayNum:data
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面显示

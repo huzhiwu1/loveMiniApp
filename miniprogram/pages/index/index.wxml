@@ -7,13 +7,13 @@
     </view>
     <opacity-wrap class='headImgWrap'>
         <avatar slot='left' gender="{{userInfo.gender}}" headImg="{{userInfo.avatarUrl}}" />
-        <how-long slot='center' howLong="{{lovers.starttime}}" />
+        <how-long slot='center' howLong="{{lovers}}" />
         <avatar slot='right'  gender="{{lovers.friend.gender}}" headImg="{{lovers.friend.avatarUrl}}" />
     </opacity-wrap>
     <heart class='heart' wx:if="{{time.otherDay(userInfo.missyoutime)}}" bindmissyou="missyou" bindtap="sendMiss"></heart>
     <intimacy-num num="{{lovers.honeyNum}}" class='ntimacyNum'></intimacy-num>
     <view class='footer'>
-        <action-button class='itemOne' num='{{5}}' type='{{"date"}}' title='纪念日' imgUrl='/images/date.png' />
+        <action-button class='itemOne' num='{{markDayNum}}' type='{{"date"}}' title='纪念日' imgUrl='/images/date.png' url="../markDay/markDay"/>
         <action-button class='itemTwo' num='{{5}}' type='{{"note"}}' title='小情话' imgUrl='/images/notes.png' />
         <action-button class='itemThree' num='{{5}}' type='{{"aunt"}}' title='姨妈助手' imgUrl='/images/alock.png' />
     </view>

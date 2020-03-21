@@ -16,7 +16,23 @@ Component({
     },
     lover:{
       type:Object,
-      value:{}
+      value:{},
+      observer(newVal,oldVal){
+        if(!newVal)return 
+        console.log(newVal,"val")
+        const _id = newVal.starttime
+        wx.cloud.callFunction({
+          name:"getOneMarkDay",
+          data:{
+            _id
+          }
+        }).then(res=>{
+          const data = res.result.data[0]
+          this.setData({
+            beginTime:data.beginTime
+          })
+        })
+      }
     }
   },
 
@@ -24,7 +40,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    beginTime:null,
   },
 
   /**

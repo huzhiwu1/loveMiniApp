@@ -1,6 +1,15 @@
-<!--miniprogram/pages/markDay/markDay.wxml-->
+<!-- miniprogram/pages/markDay/markDay.wxml -->
 <!-- <text>miniprogram/pages/markDay/markDay.wxml</text> -->
 <view class='wrapper'>
-    <recently-mark-pannel/>
-    <mark-day-pannel></mark-day-pannel>
+    <recently-mark-pannel wx:if="{{recentlyMarkDay._id}}" recentlyMarkDay="{{recentlyMarkDay}}"/>
+    <block
+    wx:for="{{markDayList}}"
+    wx:key="_id"
+    >
+    <mark-day-pannel markDay="{{item}}" ></mark-day-pannel>
+    </block>
+    
+</view>
+<view class="btn" bindtap="gotoAddMarkDay" animation="{{animationData}}">
+    <image src="/images/addGreen.png" class="img" />
 </view>

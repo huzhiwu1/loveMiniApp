@@ -1,20 +1,20 @@
 <!--components/content/content.wxml-->
 <view class='wrapper'>
     <view class='write'>
-        {{content}}
+        {{content.textInput}}
     </view>
     <view class='picBox'>
-        <img-content/>
+        <img-content imgList="{{content.imgList}}"/>
     </view>
     <view class='footer'>
         <view class='localBox'>
              <image class='img localImg' src='/images/local.png' />
-             <text>{{local}}</text>
+             <text>{{content.street_number}}</text>
         </view>
         <view class='right'>
             <view class='loveBox'>
                 <image class='img loveImg' src='/images/love.png' />
-                <text class='text' wx:if='{{loveNum>0}}'>{{loveNum}}</text>
+                <text class='text' wx:if='{{content.like.length>0}}'>{{content.like.length}}</text>
             </view>
             <image class='img lastImg' src='/images/comment.png' />
         </view>

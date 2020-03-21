@@ -1,18 +1,19 @@
 <!-- miniprogram/pages/editMarkDay/editMarkDay.wxml -->
 <!-- <text>miniprogram/pages/editMarkDay/editMarkDay.wxml</text> -->
+<wxs src="../../utils/getTime.wxs" module="time"/>
 <view class='wrapper'>
     <image src='/images/editMarkDayBg.jpeg' class='bg' />
     <view class='infoBox'>
-        <view class='dayName'>{{dayName}}{{isDownTime?'还有':"已有"}}</view>
+        <view class='dayName'>{{markDay.name}}{{markDay.isDownTime?'还有':"已有"}}</view>
         <view class='dayNumBox'>
-            <text class='dayNum'>{{dayNum}}
+            <text class='dayNum'>{{time.howDayNum(markDay.isDownTime?markDay.targetDay:markDay.beginTime)}}
             </text>
             <text class='title'>Days</text>
         </view>
-        <view class='target'>目标日：{{targetDay}}</view>
+        <view class='target'>{{markDay.isDownTime?"目标日："+markDay.targetDay:"起始日："+markDay.beginTime}}</view>
     </view>
     <view class='btnGroupBox'>
-        <animation-box>
+        <animation-box bindclick="gotoEdit">
             <view class='btnBox'>
                 <view class='imgBox'>
                     <image class='img' src='/images/edit.png' />

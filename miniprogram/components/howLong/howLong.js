@@ -8,7 +8,18 @@ Component({
       type:[Number,String],
       value:0,
       observer(newVal,oldVal){
-        console.log(newVal,"chuanjinglao")
+        if(!newVal.starttime) return;
+        wx.cloud.callFunction({
+          name:"getOneMarkDay",
+          data:{
+            _id:newVal.starttime
+          }
+        }).then(res=>{
+          const data = res.result.data[0]
+          this.setData({
+            beginTime:data.beginTime
+          })
+        })
       }
     }
   },
@@ -17,7 +28,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    beginTime:null,
   },
 
   /**

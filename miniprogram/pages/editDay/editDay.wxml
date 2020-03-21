@@ -9,7 +9,7 @@
     <view class='box'>
         <view class='dateType' bindtap='triggerDateType'>
             <view class="item {{isMoonDate?'':'active'}}">公历</view>
-            <view class="item {{isMoonDate?'active':''}}">农历</view>
+            <!-- <view class="item {{isMoonDate?'active':''}}">农历</view> -->
         </view>
         <picker mode="date" 
         value="{{date}}"  
@@ -42,6 +42,18 @@
             <text >提醒时间</text>
             <view class='rightBox'>
                 <text class='rightTitle'>{{reminDay.select(remindValue,remindArr)}}</text>
+                <image  class='img'src='/images/right.png' />
+            </view>
+        </view>
+    </picker>
+     <picker mode="selector"
+    range="{{remindPeopleArr}}"
+    bindchange="selectPeople"
+    range-key="name">
+    <view  class='box'>
+            <text >提醒谁</text>
+            <view class='rightBox'>
+                <text class='rightTitle'>{{remindPeopleArr[remindPeople].name}}</text>
                 <image  class='img'src='/images/right.png' />
             </view>
         </view>
